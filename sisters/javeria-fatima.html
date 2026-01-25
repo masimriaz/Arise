@@ -5,105 +5,334 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javeria Fatima - ARISE بخمسة</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-lg">
             <a class="navbar-brand" href="../index.html">
-                <span class="brand-text">ARISE بخمسة</span>
+                <div class="brand-logo">
+                    <div class="brand-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="white" fill-opacity="0.2"/>
+                            <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-text-primary">ARISE</span>
+                        <span class="brand-text-secondary">بخمسة</span>
+                    </div>
+                </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../library.html">Library</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../talent-platform.html">Talent Platform</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html"><i class="fas fa-info-circle"></i><span>About</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../services.html"><i class="fas fa-hand-holding-heart"></i><span>Services</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../library.html"><i class="fas fa-book"></i><span>Library</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../talent-platform.html"><i class="fas fa-users"></i><span>Talent Platform</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Profile Section -->
-    <section>
-        <div class="container-lg">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 text-center">
-                    <div class="card rounded-4 shadow-sm">
-                        <img src="https://via.placeholder.com/400x300/1F3D2B/FFFFFF?text=Javeria+Fatima" class="card-img-top rounded-top-4" alt="Javeria Fatima">
-                        <div class="card-body">
-                            <h5 class="card-title">Javeria Fatima</h5>
-                            <p class="card-text">Dedicated educator and counselor</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <h1>Javeria Fatima</h1>
-                    <p class="lead mb-4">Dedicated educator and counselor specializing in faith-based learning and emotional support.</p>
-                    <h3>Areas of Specialization</h3>
-                    <ul class="mb-4">
-                        <li>Homeschooling support</li>
-                        <li>Child development</li>
-                        <li>Family counseling</li>
-                    </ul>
-                    <h3>Services Offered</h3>
-                    <ul class="mb-4">
-                        <li>Personalized education plans</li>
-                        <li>Parenting workshops</li>
-                        <li>Emotional guidance sessions</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row g-4 mt-5">
-                <div class="col-md-6">
-                    <div class="card rounded-4 shadow-sm">
-                        <div class="card-body">
-                            <h5>Contact Information</h5>
-                            <p><strong>Phone:</strong> +92 300 1234567</p>
-                            <p><strong>Email:</strong> javeria@arisebkhamse.com</p>
-                            <div class="mt-3">
-                                <a href="#" class="btn btn-outline-primary me-2">Facebook</a>
-                                <a href="#" class="btn btn-outline-primary">LinkedIn</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card rounded-4 shadow-sm">
-                        <div class="card-body">
-                            <h5>Subscribe to Updates</h5>
-                            <form>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="Your email" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Subscribe</button>
-                            </form>
+    <!-- Hero Section -->
+    <header class="hero" style="height: 45vh; min-height: 400px; padding-top: 3rem;">
+        <div class="hero-background-visual" style="opacity: 0.3;">
+            <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="g1" gradientTransform="rotate(45)"><stop offset="0%" stop-color="rgba(255, 255, 255, 0.08)"/><stop offset="100%" stop-color="rgba(255, 255, 255, 0)"/></linearGradient>
+                </defs>
+                <g opacity="0.5"><circle cx="500" cy="500" r="300" fill="url(#g1)"/></g>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="hero-content">
+                        <h1 class="hero-headline" style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 0.5rem;">Javeria Fatima</h1>
+                        <p class="hero-subheadline" style="font-size: 1.25rem; margin-bottom: 1rem;">Educator, Counselor & Family Guide</p>
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <span class="badge bg-success" style="font-size: 0.9rem; padding: 0.5rem 1rem;">10+ Years Experience</span>
+                            <span class="badge bg-info" style="font-size: 0.9rem; padding: 0.5rem 1rem;">500+ Families Served</span>
+                            <span class="badge bg-warning" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Certified Counselor</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
+
+    <!-- Main Content -->
+    <div class="section-wrapper" style="padding-top: 3rem;">
+        <div class="container-lg">
+            <div class="row g-5">
+                <!-- Left Column: Profile & Services -->
+                <div class="col-lg-8">
+                    <!-- About Section -->
+                    <div class="mb-5">
+                        <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 1.5rem;">About Me</h2>
+                        <p style="font-size: 1.0625rem; line-height: 1.8; color: var(--color-text-secondary);">
+                            With over 10 years of dedicated experience in faith-based education and family counseling, I am passionate about empowering mothers and families to navigate the beautiful journey of homeschooling while maintaining strong Islamic values and principles.
+                        </p>
+                        <p style="font-size: 1.0625rem; line-height: 1.8; color: var(--color-text-secondary);">
+                            My holistic approach combines traditional Islamic teachings with modern educational methodologies, creating nurturing environments where children thrive intellectually, emotionally, and spiritually.
+                        </p>
+                    </div>
+
+                    <!-- Specializations -->
+                    <div class="mb-5">
+                        <h3 style="font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1.5rem;">Areas of Specialization</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3 p-3" style="background: var(--color-surface-clay); border-radius: 12px; border-left: 4px solid var(--color-accent-emerald);">
+                                    <i class="fas fa-graduation-cap" style="color: var(--color-accent-emerald); font-size: 1.75rem;"></i>
+                                    <div>
+                                        <h5 style="font-family: var(--font-serif); margin-bottom: 0.5rem;">Homeschooling Support</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">Curriculum planning, implementation, and progress tracking</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3 p-3" style="background: var(--color-surface-clay); border-radius: 12px; border-left: 4px solid var(--color-accent-emerald);">
+                                    <i class="fas fa-child" style="color: var(--color-accent-emerald); font-size: 1.75rem;"></i>
+                                    <div>
+                                        <h5 style="font-family: var(--font-serif); margin-bottom: 0.5rem;">Child Development</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">Age-appropriate strategies and developmental milestones</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3 p-3" style="background: var(--color-surface-clay); border-radius: 12px; border-left: 4px solid var(--color-accent-emerald);">
+                                    <i class="fas fa-users" style="color: var(--color-accent-emerald); font-size: 1.75rem;"></i>
+                                    <div>
+                                        <h5 style="font-family: var(--font-serif); margin-bottom: 0.5rem;">Family Counseling</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">Emotional support and family dynamics improvement</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3 p-3" style="background: var(--color-surface-clay); border-radius: 12px; border-left: 4px solid var(--color-accent-emerald);">
+                                    <i class="fas fa-book-open" style="color: var(--color-accent-emerald); font-size: 1.75rem;"></i>
+                                    <div>
+                                        <h5 style="font-family: var(--font-serif); margin-bottom: 0.5rem;">Islamic Studies</h5>
+                                        <p style="font-size: 0.9rem; margin: 0;">Quranic education and character development</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Offered -->
+                    <div class="mb-5">
+                        <h3 style="font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1.5rem;">Services Offered</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="arise-card" style="height: 100%;">
+                                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                        <i class="fas fa-book" style="font-size: 2rem; color: var(--color-accent-emerald);"></i>
+                                        <h5 style="font-family: var(--font-serif); margin: 0;">Personalized Education Plans</h5>
+                                    </div>
+                                    <p style="font-size: 0.95rem; margin: 0;">Customized homeschooling curricula aligned with Islamic values, tailored to each child's learning style and pace.</p>
+                                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-surface-clay);">
+                                        <small style="color: var(--color-text-secondary);">📅 Duration: Ongoing | 💰 Consultation: $50/hour</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="arise-card" style="height: 100%;">
+                                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                        <i class="fas fa-users" style="font-size: 2rem; color: var(--color-accent-emerald);"></i>
+                                        <h5 style="font-family: var(--font-serif); margin: 0;">Parenting Workshops</h5>
+                                    </div>
+                                    <p style="font-size: 0.95rem; margin: 0;">Monthly interactive sessions on faith-based parenting strategies, discipline, and emotional intelligence.</p>
+                                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-surface-clay);">
+                                        <small style="color: var(--color-text-secondary);">📅 Monthly | 👥 Group Sessions | 💰 $30/person</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="arise-card" style="height: 100%;">
+                                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                        <i class="fas fa-heart" style="font-size: 2rem; color: var(--color-accent-emerald);"></i>
+                                        <h5 style="font-family: var(--font-serif); margin: 0;">Emotional Guidance</h5>
+                                    </div>
+                                    <p style="font-size: 0.95rem; margin: 0;">One-on-one counseling sessions for mothers and families addressing emotional challenges and personal growth.</p>
+                                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-surface-clay);">
+                                        <small style="color: var(--color-text-secondary);">📅 60-90 min | 🎯 Individual | 💰 $75/session</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="arise-card" style="height: 100%;">
+                                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                        <i class="fas fa-video" style="font-size: 2rem; color: var(--color-accent-emerald);"></i>
+                                        <h5 style="font-family: var(--font-serif); margin: 0;">Online Consultations</h5>
+                                    </div>
+                                    <p style="font-size: 0.95rem; margin: 0;">Flexible virtual sessions via Zoom for families worldwide, accommodating different time zones.</p>
+                                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-surface-clay);">
+                                        <small style="color: var(--color-text-secondary);">📅 Flexible | 🌍 Global | 💰 $60/session</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Credentials -->
+                    <div class="mb-5">
+                        <h3 style="font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1.5rem;">Credentials & Qualifications</h3>
+                        <div class="arise-card">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2 d-flex gap-2">
+                                    <i class="fas fa-certificate" style="color: var(--color-accent-emerald); margin-top: 0.25rem;"></i>
+                                    <span><strong>M.Ed in Islamic Education</strong> - University of Islamic Studies</span>
+                                </li>
+                                <li class="mb-2 d-flex gap-2">
+                                    <i class="fas fa-certificate" style="color: var(--color-accent-emerald); margin-top: 0.25rem;"></i>
+                                    <span><strong>Certified Family Counselor</strong> - International Counseling Association</span>
+                                </li>
+                                <li class="mb-2 d-flex gap-2">
+                                    <i class="fas fa-certificate" style="color: var(--color-accent-emerald); margin-top: 0.25rem;"></i>
+                                    <span><strong>Child Development Specialist</strong> - Early Childhood Education Board</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fas fa-certificate" style="color: var(--color-accent-emerald); margin-top: 0.25rem;"></i>
+                                    <span><strong>Quranic Studies Certificate</strong> - Al-Azhar Institute</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Profile Sketch -->
+                    <div class="arise-card mb-4" style="text-align: center;">
+                        <svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 200px; margin: 0 auto;">
+                            <defs>
+                                <linearGradient id="hijabGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#2F7D5C;stop-opacity:0.9" />
+                                    <stop offset="100%" style="stop-color:#1E4D3A;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Hijab -->
+                            <ellipse cx="100" cy="85" rx="60" ry="70" fill="url(#hijabGrad)"/>
+                            <!-- Face (subtle) -->
+                            <ellipse cx="100" cy="100" rx="38" ry="50" fill="#F5E6D3" opacity="0.2"/>
+                            <!-- Niqab detail -->
+                            <path d="M 70 75 Q 100 70 130 75 L 130 130 Q 100 135 70 130 Z" fill="#1E4D3A" opacity="0.7"/>
+                            <!-- Eyes area (covered) -->
+                            <circle cx="90" cy="95" r="2" fill="#1C1C1C" opacity="0.3"/>
+                            <circle cx="110" cy="95" r="2" fill="#1C1C1C" opacity="0.3"/>
+                            <!-- Body -->
+                            <rect x="65" y="150" width="70" height="100" rx="15" fill="url(#hijabGrad)" opacity="0.8"/>
+                            <!-- Decorative pattern -->
+                            <circle cx="100" cy="55" r="4" fill="#C8A95F" opacity="0.7"/>
+                            <circle cx="85" cy="65" r="2" fill="#C8A95F" opacity="0.5"/>
+                            <circle cx="115" cy="65" r="2" fill="#C8A95F" opacity="0.5"/>
+                        </svg>
+                        <p style="margin-top: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;">Islamic Woman Educator</p>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="arise-card mb-4">
+                        <h5 style="font-family: var(--font-serif); margin-bottom: 1rem;">Quick Stats</h5>
+                        <div style="display: flex; justify-content: space-around; text-align: center;">
+                            <div>
+                                <div style="font-size: 1.75rem; font-weight: 600; color: var(--color-accent-emerald);">10+</div>
+                                <small style="color: var(--color-text-secondary);">Years Experience</small>
+                            </div>
+                            <div>
+                                <div style="font-size: 1.75rem; font-weight: 600; color: var(--color-accent-emerald);">500+</div>
+                                <small style="color: var(--color-text-secondary);">Families Served</small>
+                            </div>
+                            <div>
+                                <div style="font-size: 1.75rem; font-weight: 600; color: var(--color-accent-emerald);">98%</div>
+                                <small style="color: var(--color-text-secondary);">Satisfaction</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Card -->
+                    <div class="arise-card mb-4">
+                        <h5 style="font-family: var(--font-serif); margin-bottom: 1rem;">Get in Touch</h5>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="fas fa-phone" style="color: var(--color-accent-emerald);"></i>
+                            <a href="tel:+923001234567" style="text-decoration: none; color: var(--color-text-primary);">+92 300 1234567</a>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-envelope" style="color: var(--color-accent-emerald);"></i>
+                            <a href="mailto:javeria@arisebkhamse.com" style="text-decoration: none; color: var(--color-text-primary);">javeria@arisebkhamse.com</a>
+                        </div>
+                        <a href="../contact.html" class="btn-arise btn-arise-primary w-100">Book Consultation</a>
+                    </div>
+
+                    <!-- Availability -->
+                    <div class="arise-card">
+                        <h5 style="font-family: var(--font-serif); margin-bottom: 1rem;">Availability</h5>
+                        <ul class="list-unstyled mb-0" style="font-size: 0.9rem;">
+                            <li class="mb-2"><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</li>
+                            <li class="mb-2"><strong>Saturday:</strong> 10:00 AM - 4:00 PM</li>
+                            <li><strong>Sunday:</strong> By Appointment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2026 ARISE بخمسة. All rights reserved.</p>
+    <footer class="modern-footer">
+        <div class="container-lg">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand-section">
+                        <div class="footer-brand">ARISE بخمسة</div>
+                        <p class="footer-tagline">A faith-driven collective nurturing mothers, families, and the Ummah through sacred knowledge, compassionate healing, and spiritual growth.</p>
+                    </div>
+                    <div class="footer-links-grid">
+                        <div class="footer-section">
+                            <h5>Explore</h5>
+                            <ul>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../about.html">About Us</a></li>
+                                <li><a href="../services.html">Services</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h5>Engage</h5>
+                            <ul>
+                                <li><a href="../library.html">Library</a></li>
+                                <li><a href="../talent-platform.html">Talent Platform</a></li>
+                                <li><a href="../contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h5>Connect</h5>
+                            <div class="footer-social">
+                                <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 text-end">
-                    <a href="#" class="text-white me-3">Facebook</a>
-                    <a href="#" class="text-white me-3">Instagram</a>
-                    <a href="#" class="text-white">LinkedIn</a>
+                <div class="footer-bottom-modern">
+                    <div class="footer-bottom-content">
+                        <p>&copy; 2026 ARISE بخمسة. All Rights Reserved.</p>
+                        <div class="footer-bottom-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

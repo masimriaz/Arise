@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   anchorLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
-      // Ensure it's a real anchor link and not just '#'
       if (href.length > 1) {
         const targetElement = document.querySelector(href);
         if (targetElement) {
@@ -36,17 +35,48 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /**
-   * Glassmorphism navbar scroll effect
+   * Staggered fade-in for cards
    */
-  const navbar = document.querySelector('.navbar');
-  if (navbar) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
+  const fadeInElements = document.querySelectorAll('.fade-in-up');
+  fadeInElements.forEach((el, index) => {
+    el.style.animationDelay = `${index * 0.1}s`;
+  });
+
+  /**
+   * Newsletter form basic validation
+   */
+  const newsletterForm = document.querySelector('.newsletter-form');
+  if (newsletterForm) {
+    const input = newsletterForm.querySelector('.newsletter-input');
+    const btn = newsletterForm.querySelector('.newsletter-btn');
+    
+    btn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      const email = input?.value;
+      if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        btn.textContent = 'Subscribed!';
+        btn.style.background = 'var(--color-accent-emerald)';
+        setTimeout(() => {
+          btn.textContent = 'Subscribe';
+          input.value = '';
+        }, 2000);
       } else {
-        navbar.classList.remove('scrolled');
+        input?.classList.add('is-invalid');
+        setTimeout(() => input?.classList.remove('is-invalid'), 2000);
       }
     });
   }
+
+  /**
+   * Active nav link highlighting
+   */
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    link.classList.remove('active');
+    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
 
 });

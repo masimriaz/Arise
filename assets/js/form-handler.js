@@ -256,7 +256,7 @@
    * Target: jiyafatim@gmail.com
    * @param {Object} formData - Form data to submit
    */
-  async function submitFormData(formData) {
+  function submitFormData(formData) {
     // Get form element and action URL
     const form = document.getElementById('shippingForm');
     const formAction = form?.getAttribute('action');
@@ -381,6 +381,7 @@ Example:
     // For static demo, simulate API delay
     return new Promise((resolve) => {
       setTimeout(() => {
+        console.log('✅ Demo mode: Order submitted successfully');
         resolve({ success: true, orderId: formData.orderId });
       }, 1500);
     });

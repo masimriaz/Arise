@@ -9,7 +9,7 @@
 
   // Configuration
   const CONFIG = {
-    pdfUrl: './sisters/publications/Ramadan_Journal_v1.pdf',
+    pdfUrl: 'sisters/publications/Ramadan_Journal_v1.pdf',
     previewPages: 5,           // Number of free preview pages
     totalPages: 30,            // Approximate total pages (will be updated when PDF loads)
     scale: 1.5,                // Initial zoom scale
@@ -66,13 +66,15 @@
     try {
       showLoading(true);
       
-      // Check if running on file:// protocol
-      if (window.location.protocol === 'file:') {
-        throw new Error('CORS_ERROR: Please run this page on a local web server. See browser console for instructions.');
-      }
-      
-      // Load PDF document
-      const loadingTask = pdfjsLib.getDocument(CONFIG.pdfUrl);
+      // Load PDF document with proper configuration for Git LFS
+      const loadingTask = pdfjsLib.getDocument({
+        url: CONFIG.pdfUrl,
+        cMapUrl: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/cmaps/',
+        cMapPacked: true,
+        withCredentials: false,
+        disableAutoFetch: false,
+        disableStream: false
+      });
       
       loadingTask.onProgress = function(progress) {
         if (progress.total > 0) {

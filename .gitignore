@@ -1,0 +1,7 @@
+# Large PDF files - to be uploaded manually to GitHub
+*.pdf
+assets/file/
+sisters/publications/*.pdf
+
+# Visual Studio
+.vs/

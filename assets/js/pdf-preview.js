@@ -9,7 +9,7 @@
 
   // Configuration
   const CONFIG = {
-    pdfUrl: 'sisters/publications/Ramadan_Journal_v1.pdf',
+    pdfUrl: './sisters/publications/Ramadan_Journal_v1.pdf',
     previewPages: 5,           // Number of free preview pages
     totalPages: 30,            // Approximate total pages (will be updated when PDF loads)
     scale: 1.5,                // Initial zoom scale

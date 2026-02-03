@@ -177,27 +177,28 @@ textarea:focus-visible {
    5. HERO SECTION
    ============================================== */
 .hero {
-  padding-top: 100px;
-  padding-bottom: var(--spacing-3xl);
+  margin-top: 70px;
+  margin-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
   position: relative;
-  overflow: hidden;
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
+  overflow: visible;
 }
 
 @media (min-width: 768px) {
   .hero {
-    padding-top: 120px;
-    padding-bottom: var(--spacing-4xl);
-    min-height: 90vh;
+    margin-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 
 @media (min-width: 1024px) {
   .hero {
-    min-height: 95vh;
+    margin-bottom: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 }
 
@@ -239,22 +240,23 @@ textarea:focus-visible {
 
 .hero-container {
   display: grid;
-  gap: var(--spacing-xl);
-  align-items: center;
+  gap: 2rem;
+  align-items: start;
   position: relative;
   z-index: 1;
 }
 
 @media (min-width: 768px) {
   .hero-container {
-    gap: var(--spacing-2xl);
+    gap: 3rem;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-container {
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: var(--spacing-4xl);
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
   }
 }
 
@@ -492,6 +494,8 @@ textarea:focus-visible {
   align-items: center;
   gap: var(--spacing-xl);
   animation: slideInRight 0.8s ease-out;
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes slideInRight {
@@ -509,21 +513,11 @@ textarea:focus-visible {
   position: relative;
   max-width: 100%;
   width: 100%;
-  animation: float 6s ease-in-out infinite;
 }
 
 @media (min-width: 768px) {
   .journal-mockup {
-    max-width: 500px;
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
+    max-width: 400px;
   }
 }
 
@@ -1997,7 +1991,27 @@ img[loading="lazy"] {
 /* All responsive styles are integrated above using mobile-first approach */
 
 /* ==============================================
-   18. PRINT STYLES
+   20. HARD COPY REQUEST SECTION
+   ============================================== */
+.contact-section {
+  background: linear-gradient(180deg, var(--color-surface-ivory) 0%, var(--color-surface-clay) 100%);
+}
+
+.contact-form {
+  background: var(--color-surface);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: var(--spacing-lg);
+  }
+}
+
+/* ==============================================
+   21. PRINT STYLES
    ============================================== */
 @media print {
   .navbar,

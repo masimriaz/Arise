@@ -349,32 +349,6 @@
         </div>
     </section>
 
-    <!-- Testimonial Section -->
-    <section class="testimonial-section">
-        <div class="container">
-            <div class="testimonial-card">
-                <div class="quote-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 21C3 17.134 6.13401 14 10 14C10 14 9 14 9 9C9 4 14 4 14 4C14 4 10 7 10 11C10 15 13 18 13 21H3Z" fill="currentColor"/>
-                        <path d="M13 21C13 17.134 16.134 14 20 14C20 14 19 14 19 9C19 4 24 4 24 4C24 4 20 7 20 11C20 15 23 18 23 21H13Z" fill="currentColor"/>
-                    </svg>
-                </div>
-                <blockquote class="testimonial-quote">
-                    "This Ramadan journal provides a beautiful, structured approach to self-reflection during the blessed month. 
-                    The prompts are thoughtfully designed to guide individuals—especially young Muslims—toward deeper 
-                    self-awareness and spiritual growth. As a counsellor, I appreciate the balance between Islamic values 
-                    and evidence-based psychological practices. It's an excellent tool for families to use together."
-                </blockquote>
-                <div class="testimonial-author">
-                    <div class="author-info">
-                        <cite class="author-name">— Licensed Islamic Counsellor</cite>
-                        <p class="author-credential">Specialized in Youth & Family Therapy</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
@@ -741,6 +715,64 @@
             </div>
         </div>
     </div>
+
+    <!-- Hard Copy Request Section -->
+    <section class="py-5 bg-light" id="hardcopy-request">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Request Hard Copy</h2>
+                    <p class="lead text-muted">Fill out the form below and we'll contact you within 24 hours about getting your physical Ramadan Journal</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-4 p-md-5">
+                            <form id="hardCopyForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                                <input type="hidden" name="_subject" value="Hard Copy Request - Ramadan Journal">
+                                <input type="hidden" name="requestType" value="Hard Copy">
+                                
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="hcName" class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control form-control-lg" id="hcName" name="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="hcEmail" class="form-label fw-semibold">Email <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control form-control-lg" id="hcEmail" name="email" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="hcPhone" class="form-label fw-semibold">Phone <span class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control form-control-lg" id="hcPhone" name="phone" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="hcCountry" class="form-label fw-semibold">Country <span class="text-danger">*</span></label>
+                                        <select class="form-select form-select-lg" id="hcCountry" name="country" required>
+                                            <option value="">Select country</option>
+                                            <option value="Pakistan" selected>Pakistan</option>
+                                            <option value="United Kingdom">United Kingdom</option>
+                                            <option value="United States">United States</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="hcMessage" class="form-label fw-semibold">Message <span class="text-muted">(Optional)</span></label>
+                                        <textarea class="form-control form-control-lg" id="hcMessage" name="message" rows="4" placeholder="Any special requests or questions?"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary btn-lg w-100 py-3">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Request
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer - Modern Masterpiece -->
     <footer class="modern-footer">

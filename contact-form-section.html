@@ -1,0 +1,275 @@
+<!-- ============================================
+     CONTACT FORM SECTION - Request Hard Copy
+     Insert this BEFORE the footer section
+     ============================================ -->
+<section class="contact-section section-primary" id="hardcopy-request">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-badge">
+                <i class="fas fa-envelope"></i>
+                <span>Get Your Copy</span>
+            </div>
+            <h2 class="section-title">Request Hard Copy</h2>
+            <p class="section-subtitle">
+                Fill out the form below and we'll contact you within 24 hours about getting your physical Ramadan Journal delivered to your doorstep.
+            </p>
+        </div>
+
+        <div class="contact-form-container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form-card">
+                        <form id="hardCopyContactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+                            <!-- Honeypot -->
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                            
+                            <!-- Hidden Fields -->
+                            <input type="hidden" name="_subject" value="Hard Copy Request - Ramadan Journal">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="requestType" value="Hard Copy Journal">
+                            
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="contactName" class="form-label">
+                                        Full Name <span class="required">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="contactName" 
+                                        name="name" 
+                                        class="form-input" 
+                                        required 
+                                        autocomplete="name"
+                                        placeholder="Your full name"
+                                    >
+                                    <span class="error-message" id="nameError"></span>
+                                </div>
+                                
+                                <div class="form-group col-md-6">
+                                    <label for="contactEmail" class="form-label">
+                                        Email Address <span class="required">*</span>
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="contactEmail" 
+                                        name="email" 
+                                        class="form-input" 
+                                        required 
+                                        autocomplete="email"
+                                        placeholder="your.email@example.com"
+                                    >
+                                    <span class="error-message" id="emailError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="contactPhone" class="form-label">
+                                        Phone Number <span class="required">*</span>
+                                    </label>
+                                    <input 
+                                        type="tel" 
+                                        id="contactPhone" 
+                                        name="phone" 
+                                        class="form-input" 
+                                        required 
+                                        autocomplete="tel"
+                                        placeholder="+92-XXX-XXXXXXX"
+                                    >
+                                    <span class="error-message" id="phoneError"></span>
+                                </div>
+                                
+                                <div class="form-group col-md-6">
+                                    <label for="contactCountry" class="form-label">
+                                        Country <span class="required">*</span>
+                                    </label>
+                                    <select 
+                                        id="contactCountry" 
+                                        name="country" 
+                                        class="form-input" 
+                                        required
+                                    >
+                                        <option value="">Select country</option>
+                                        <option value="Pakistan" selected>Pakistan</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="United States">United States</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="United Arab Emirates">United Arab Emirates</option>
+                                        <option value="Saudi Arabia">Saudi Arabia</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <span class="error-message" id="countryError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactMessage" class="form-label">
+                                    Message <span class="optional">(Optional)</span>
+                                </label>
+                                <textarea 
+                                    id="contactMessage" 
+                                    name="message" 
+                                    class="form-input" 
+                                    rows="4"
+                                    placeholder="Any special requests or questions?"
+                                ></textarea>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-large" id="contactSubmitBtn">
+                                    <span class="btn-text">
+                                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Send Request
+                                    </span>
+                                    <span class="btn-spinner" style="display: none;">
+                                        <svg class="spinner-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" opacity="0.25"/>
+                                            <path d="M12 2C6.47715 2 2 6.47715 2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                        Sending...
+                                    </span>
+                                </button>
+                            </div>
+
+                            <p class="form-note">
+                                <svg class="icon-shield-small" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Your information is secure and will only be used to process your request.
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info Cards -->
+                    <div class="contact-info-grid">
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4>Email Us</h4>
+                            <a href="mailto:jiyafatim@gmail.com">jiyafatim@gmail.com</a>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h4>Call Us</h4>
+                            <a href="tel:+92XXXXXXXXX">+92-XXX-XXXXXXX</a>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4>Response Time</h4>
+                            <p>Within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add corresponding CSS -->
+<style>
+.contact-section {
+    background: linear-gradient(180deg, var(--color-surface-ivory) 0%, var(--color-surface-clay) 100%);
+}
+
+.contact-form-card {
+    background: var(--color-surface);
+    padding: var(--space-xl);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.contact-info-card {
+    background: var(--color-surface);
+    padding: var(--space-lg);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-slow);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.contact-info-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-accent-emerald), var(--color-gradient-mid));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto var(--space-md);
+}
+
+.contact-info-card h4 {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-sm);
+    color: var(--color-text-primary);
+}
+
+.contact-info-card a,
+.contact-info-card p {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    margin: 0;
+}
+
+.contact-info-card a:hover {
+    color: var(--color-accent-emerald);
+}
+
+.form-note {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-md);
+    text-align: center;
+    justify-content: center;
+}
+
+.icon-shield-small {
+    width: 16px;
+    height: 16px;
+    color: var(--color-success);
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .contact-form-card {
+        padding: var(--space-lg);
+    }
+    
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<!-- Add script reference before closing body tag -->
+<script src="assets/js/contact-form.js"></script>

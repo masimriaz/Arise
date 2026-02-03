@@ -1,0 +1,52 @@
+{
+  "product": {
+    "name": "Ramadan Journal - Self-Discovery Companion",
+    "shortName": "Ramadan Journal",
+    "version": "v1",
+    "pdfFile": "sisters/publications/Ramadan_Journal_v1.pdf",
+    "coverImage": "sisters/publications/journal_cover.jpeg",
+    "previewPages": 5,
+    "totalPages": 30
+  },
+  "pricing": {
+    "global": {
+      "amount": 30,
+      "currency": "£",
+      "currencyCode": "GBP"
+    },
+    "pakistan": {
+      "amount": 2300,
+      "currency": "Rs.",
+      "currencyCode": "PKR"
+    }
+  },
+  "launch": {
+    "limitedOfferCount": 50,
+    "limitedOfferText": "Limited offer: first 50 buyers",
+    "targetRegion": "Pakistan"
+  },
+  "contact": {
+    "email": "orders@arise-platform.com",
+    "phone": "+92-XXX-XXXXXXX",
+    "address": "ARISE Platform, Pakistan"
+  },
+  "social": {
+    "facebook": "#",
+    "instagram": "#",
+    "twitter": "#",
+    "whatsapp": "+92XXXXXXXXXX"
+  },
+  "features": [
+    "30-day guided self-awareness journey",
+    "Daily reflection prompts for spiritual growth",
+    "Family-friendly content suitable for ages 10+",
+    "Professional guidance from licensed counsellors",
+    "Complete to receive a personalized certificate",
+    "Beautiful minimal design for peaceful reflection"
+  ],
+  "seo": {
+    "title": "Ramadan Journal 2026 - Self-Discovery & Spiritual Growth",
+    "description": "Transform your Ramadan with our guided journal. 30 days of reflection, family-friendly activities, and professional counselling insights. Limited launch offer for Pakistan - Rs. 2,300.",
+    "keywords": "ramadan journal, islamic journal, self-awareness, spiritual growth, ramadan 2026, family journal, muslim journal"
+  }
+}

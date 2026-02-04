@@ -1,0 +1,24 @@
+{
+  "product": {
+    "name": "Ramadan Journal 2026",
+    "pricePakistan": 2300,
+    "priceGlobal": 30,
+    "currency": {
+      "pakistan": "Rs.",
+      "global": "£"
+    },
+    "earlyBirdLimit": 50,
+    "pdfPreviewPages": 5,
+    "pdfTotalPages": 30,
+    "pdfUrl": "publications/Ramadan_Journal_Sample_5_Pages.pdf"
+  },
+  "contact": {
+    "email": "jiyafatim@gmail.com",
+    "formspreeId": "YOUR_FORM_ID"
+  },
+  "site": {
+    "url": "https://masimriaz.github.io/Arise/ramadan-journal/",
+    "title": "Ramadan Journal 2026 - Self-Discovery Companion",
+    "description": "Transform your Ramadan with our guided journal. 30 days of reflection, family-friendly activities, and professional counselling insights."
+  }
+}

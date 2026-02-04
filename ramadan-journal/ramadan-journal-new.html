@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transform your Ramadan with our guided journal. 30 days of reflection, family-friendly activities, and professional counselling insights. Limited launch offer for Pakistan - Rs. 2,300.">
+    <meta name="keywords" content="ramadan journal, islamic journal, self-awareness, spiritual growth, ramadan 2026">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="Ramadan Journal 2026 - Self-Discovery & Spiritual Growth">
+    <meta property="og:description" content="30-day guided journey for spiritual reflection. Limited launch offer!">
+    <meta property="og:image" content="assets/img/cover-mockup.png">
+    
+    <title>Ramadan Journal 2026 - Transform Your Sacred Month | ARISE</title>
+    
+    <!-- Bootstrap 5 CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Poppins (headings) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Parent Site CSS (index.html styles) -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- Custom Journal CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    
+    <!-- PDF.js (lazy loaded via module) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+</head>
+<body>
+    <!-- Skip to main content (accessibility) -->
+    <a href="#hero" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-lg">
+            <a class="navbar-brand" href="../index.html">
+                <div class="brand-logo">
+                    <div class="brand-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="white" fill-opacity="0.2"/>
+                            <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-text-primary">ARISE</span>
+                        <span class="brand-text-secondary">بخمسة</span>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../services.html">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../library.html">
+                            <i class="fas fa-book"></i>
+                            <span>Library</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../talent-platform.html">
+                            <i class="fas fa-users"></i>
+                            <span>Talent Platform</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ramadan-journal-new.html">
+                            <i class="fas fa-book-open"></i>
+                            <span>Ramadan Journal</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================================================
+         HERO SECTION
+         Full-width split hero with CTA, pricing, and parallax mockup
+         ======================================================================== -->
+    <section class="hero-section-journal">
+        <div class="hero-banner-overlay" style="background-image: url('assets/img/banner.png');"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left: Headline, Pricing, CTA -->
+                <div class="col-lg-6 hero-content">
+                    <!-- Special Coupon Banner -->
+                    <div class="coupon-banner">
+                        <div class="coupon-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="coupon-content">
+                            <div class="coupon-title">First 50 Customers Special!</div>
+                            <div class="coupon-code-display">
+                                <span class="code-label">Use Code:</span>
+                                <span class="code-value" id="couponCodeDisplay">RAMADAN50</span>
+                                <button class="btn-copy-code" onclick="copyCouponCode()" aria-label="Copy coupon code">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="coupon-benefit">Get 10% OFF your order!</div>
+                        </div>
+                        <div class="coupon-badge">
+                            <span class="badge-number" id="spotsRemaining">50</span>
+                            <span class="badge-text">Left</span>
+                        </div>
+                    </div>
+
+                    <!-- Limited Offer Badge -->
+                    <div class="badge-limited">
+                        <i class="fas fa-bolt" aria-hidden="true"></i>
+                        Limited Early Bird Offer
+                    </div>
+
+                    <!-- Headline -->
+                    <h1 class="hero-title">
+                        Transform Your Ramadan Journey
+                        <span class="title-highlight">2026</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="hero-subtitle">
+                        A guided journal combining Islamic psychology insights with daily spiritual prompts. 
+                        Designed by licensed counsellors for ages 10+ to deepen your connection during the blessed month.
+                    </p>
+
+                    <!-- Pricing Grid -->
+                    <div class="price-grid">
+                        <div class="price-item">
+                            <span class="price-label">Global Price</span>
+                            <span class="price-amount">£<span id="priceGlobal">30</span></span>
+                        </div>
+                        <div class="price-divider"></div>
+                        <div class="price-item price-highlight">
+                            <span class="price-label">Pakistan Launch</span>
+                            <span class="price-amount">Rs. <span id="pricePakistan">2,300</span></span>
+                        </div>
+                    </div>
+
+                    <!-- CTAs -->
+                    <div class="hero-ctas">
+                        <button class="btn btn-primary btn-lg" onclick="scrollToPreview()" aria-label="Preview first 5 pages">
+                            <i class="fas fa-eye me-2"></i>
+                            Preview 5 Pages
+                        </button>
+                        <button class="btn btn-secondary btn-lg" onclick="openOrderForm()" aria-label="Order full journal">
+                            <i class="fas fa-shopping-cart me-2"></i>
+                            Order Full Journal
+                        </button>
+                    </div>
+
+                    <!-- Counter -->
+                    <div class="counter-wrapper">
+                        <i class="fas fa-users me-2" aria-hidden="true"></i>
+                        <span id="buyersRemaining">43</span> early bird spots remaining
+                    </div>
+                </div>
+
+                <!-- Right: 3D Journal Mockup with Parallax -->
+                <div class="col-lg-6 hero-visual">
+                    <div class="journal-mockup" data-tilt>
+                        <!-- Fallback image -->
+                        <img src="assets/img/journal_cover.jpeg" 
+                             alt="Ramadan Journal 2026 Cover - Teal and gold spiritual growth journal" 
+                             class="journal-image"
+                             loading="eager"
+                             onerror="this.src='assets/img/intro.png'">
+                        <!-- 3D effect layers -->
+                        <div class="mockup-shadow"></div>
+                        <div class="mockup-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+         FEATURES SECTION - What's Inside
+         ======================================================================== -->
+    <section class="features-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What's Inside</h2>
+                <p class="section-subtitle">Everything you need for a transformative Ramadan experience</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3 class="feature-title">30-Day Journey</h3>
+                        <p class="feature-description">Structured daily prompts to guide your spiritual growth throughout Ramadan</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="feature-title">Family Friendly</h3>
+                        <p class="feature-description">Suitable for ages 10+ with content that engages both youth and adults</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="feature-title">Professional Guidance</h3>
+                        <p class="feature-description">Insights from licensed counsellors specializing in Islamic psychology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+         IMAGE GALLERY PREVIEW SECTION - First 5 Pages
+         ======================================================================== -->
+    <section id="preview" class="gallery-preview-section">
+        <div class="preview-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="preview-title-badge">
+                            <i class="fas fa-eye"></i>
+                            <span>Free Preview</span>
+                        </div>
+                        <h2 class="preview-section-title">Preview the Journal</h2>
+                        <p class="preview-section-subtitle">Explore the first 5 pages. Experience the quality, design, and thoughtful prompts that will guide your Ramadan journey.</p>
+                    </div>
+                    <div class="col-lg-6 text-lg-end">
+                        <div class="preview-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">5</span>
+                                <span class="stat-label">Pages Available</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-number">30</span>
+                                <span class="stat-label">Total Pages</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview-main">
+            <div class="container">
+                <!-- Main Gallery Viewer -->
+                <div class="image-gallery-viewer">
+                    <div class="main-image-container">
+                        <!-- Navigation Buttons -->
+                        <button class="gallery-nav-btn prev" onclick="prevPage()" id="prevBtn" aria-label="Previous page">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        
+                        <!-- Main Image -->
+                        <img id="mainImage" 
+                             src="assets/img/1.jpeg" 
+                             alt="Ramadan Journal Page 1">
+                        
+                        <!-- Page Indicator -->
+                        <div class="page-indicator">
+                            <span id="currentPageNum">1</span> / <span>5</span>
+                        </div>
+                        
+                        <button class="gallery-nav-btn next" onclick="nextPage()" id="nextBtn" aria-label="Next page">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Image Caption -->
+                    <div class="image-caption">
+                        <i class="fas fa-book-open me-2"></i>
+                        <span>Use arrow keys or click thumbnails to navigate</span>
+                    </div>
+                </div>
+
+                <!-- Thumbnail Gallery -->
+                <div class="thumbnail-gallery">
+                    <div class="thumbnail-item active" onclick="selectPage(1)">
+                        <img src="assets/img/1.jpeg" alt="Page 1 thumbnail">
+                        <div class="thumbnail-page-num">1</div>
+                    </div>
+                    <div class="thumbnail-item" onclick="selectPage(2)">
+                        <img src="assets/img/2.jpeg" alt="Page 2 thumbnail">
+                        <div class="thumbnail-page-num">2</div>
+                    </div>
+                    <div class="thumbnail-item" onclick="selectPage(3)">
+                        <img src="assets/img/3.jpeg" alt="Page 3 thumbnail">
+                        <div class="thumbnail-page-num">3</div>
+                    </div>
+                    <div class="thumbnail-item" onclick="selectPage(4)">
+                        <img src="assets/img/4.jpeg" alt="Page 4 thumbnail">
+                        <div class="thumbnail-page-num">4</div>
+                    </div>
+                    <div class="thumbnail-item" onclick="selectPage(5)">
+                        <img src="assets/img/5.jpeg" alt="Page 5 thumbnail">
+                        <div class="thumbnail-page-num">5</div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="gallery-cta-section">
+                    <h4><i class="fas fa-heart me-2"></i>Want to see all 30 pages?</h4>
+                    <p>Order your complete Ramadan Journal today and unlock the full transformative experience with daily reflections, prompts, and guidance.</p>
+                    <button class="btn btn-primary" onclick="openOrderForm()">
+                        <i class="fas fa-shopping-cart me-2"></i>Order Your Journal Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+         ORDER FORM MODAL
+         Requirement: Formspree integration, validation, accessibility
+         Security: Honeypot (_gotcha), privacy consent, client validation
+         ======================================================================== -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content modal-hero-theme">
+                <div class="modal-header modal-header-hero">
+                    <div class="modal-title-wrapper">
+                        <div class="modal-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <h2 id="orderModalLabel" class="modal-title">Complete Your Order</h2>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body modal-body-hero">
+                    <!-- Order Summary -->
+                    <div class="order-summary-hero mb-4">
+                        <div class="summary-header">
+                            <i class="fas fa-file-invoice"></i>
+                            <h3>Order Summary</h3>
+                        </div>
+                        <div class="summary-content">
+                            <div class="product-item">
+                                <div class="product-info">
+                                    <i class="fas fa-book"></i>
+                                    <span>Ramadan Journal 2026 (Physical Copy)</span>
+                                </div>
+                                <span class="product-price" id="originalPrice">Rs. 2,300</span>
+                            </div>
+                            <div class="discount-row" id="discountRow" style="display: none;">
+                                <div class="discount-info">
+                                    <i class="fas fa-tag"></i>
+                                    <span>Discount (<span id="discountCode"></span>)</span>
+                                </div>
+                                <span class="discount-amount" id="discountAmount">- Rs. 0</span>
+                            </div>
+                            <div class="total-row">
+                                <div class="total-label">
+                                    <strong>Total Amount</strong>
+                                </div>
+                                <span class="total-price" id="totalPrice">Rs. 2,300</span>
+                            </div>
+                            <div class="payment-info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong>Payment Options:</strong> Cash on Delivery (COD) or Bank Transfer<br>
+                                    <small>Payment instructions will be sent via email after order confirmation</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formspree Form -->
+                    <form id="orderForm" 
+                          action="https://formspree.io/f/xrelnyql" 
+                          method="POST" 
+                          novalidate
+                          data-ajax="true">
+                        
+                        <!-- Hidden Fields for Formspree -->
+                        <input type="hidden" name="_subject" value="New Ramadan Journal Order">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_replyto" id="replyToField">
+                        <input type="hidden" name="_to" value="asimesp@gmail.com">
+                        <input type="hidden" name="orderId" id="orderIdField">
+                        <input type="hidden" name="timestamp" id="timestampField">
+                        <input type="hidden" name="product" value="Ramadan Journal v1">
+                        
+                        <!-- Honeypot (spam prevention) -->
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                        <div class="form-section-header">
+                            <i class="fas fa-shipping-fast"></i>
+                            <h3>Shipping Information</h3>
+                        </div>
+
+                        <!-- Name Row -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">
+                                    First Name <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="firstName" 
+                                       name="firstName" 
+                                       required 
+                                       aria-required="true"
+                                       autocomplete="given-name">
+                                <div class="invalid-feedback" id="firstNameError"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">
+                                    Last Name <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="lastName" 
+                                       name="lastName" 
+                                       required 
+                                       aria-required="true"
+                                       autocomplete="family-name">
+                                <div class="invalid-feedback" id="lastNameError"></div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">
+                                Email Address <span class="text-danger">*</span>
+                            </label>
+                            <input type="email" 
+                                   class="form-control" 
+                                   id="email" 
+                                   name="email" 
+                                   required 
+                                   aria-required="true"
+                                   autocomplete="email"
+                                   placeholder="your.email@example.com">
+                            <div class="invalid-feedback" id="emailError"></div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">
+                                Phone Number <span class="text-danger">*</span>
+                            </label>
+                            <input type="tel" 
+                                   class="form-control" 
+                                   id="phone" 
+                                   name="phone" 
+                                   required 
+                                   aria-required="true"
+                                   autocomplete="tel"
+                                   placeholder="+92-XXX-XXXXXXX">
+                            <div class="invalid-feedback" id="phoneError"></div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="mb-3">
+                            <label for="addressLine1" class="form-label">
+                                Address Line 1 <span class="text-danger">*</span>
+                            </label>
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="addressLine1" 
+                                   name="addressLine1" 
+                                   required 
+                                   aria-required="true"
+                                   autocomplete="address-line1"
+                                   placeholder="Street address">
+                            <div class="invalid-feedback" id="addressLine1Error"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="addressLine2" class="form-label">
+                                Address Line 2 <span class="text-muted">(Optional)</span>
+                            </label>
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="addressLine2" 
+                                   name="addressLine2" 
+                                   autocomplete="address-line2"
+                                   placeholder="Apartment, suite, etc.">
+                        </div>
+
+                        <!-- City, State, Postal -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-4">
+                                <label for="city" class="form-label">
+                                    City <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="city" 
+                                       name="city" 
+                                       required 
+                                       aria-required="true"
+                                       autocomplete="address-level2">
+                                <div class="invalid-feedback" id="cityError"></div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="state" class="form-label">
+                                    State/Province <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="state" 
+                                       name="state" 
+                                       required 
+                                       aria-required="true"
+                                       autocomplete="address-level1">
+                                <div class="invalid-feedback" id="stateError"></div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="postalCode" class="form-label">
+                                    Postal Code <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="postalCode" 
+                                       name="postalCode" 
+                                       required 
+                                       aria-required="true"
+                                       autocomplete="postal-code">
+                                <div class="invalid-feedback" id="postalCodeError"></div>
+                            </div>
+                        </div>
+
+                        <!-- Country -->
+                        <div class="mb-3">
+                            <label for="country" class="form-label">
+                                Country <span class="text-danger">*</span>
+                            </label>
+                            <select class="form-select" 
+                                    id="country" 
+                                    name="country" 
+                                    required 
+                                    aria-required="true"
+                                    autocomplete="country-name">
+                                <option value="">Select country</option>
+                                <option value="Pakistan" selected>Pakistan</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="United States">United States</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Australia">Australia</option>
+                                <option value="United Arab Emirates">United Arab Emirates</option>
+                                <option value="Saudi Arabia">Saudi Arabia</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <div class="invalid-feedback" id="countryError"></div>
+                        </div>
+
+                        <!-- Coupon Code -->
+                        <div class="mb-3">
+                            <div class="coupon-form-section">
+                                <label for="couponCode" class="form-label">
+                                    <i class="fas fa-tag me-2"></i>Coupon Code <span class="text-muted">(Optional)</span>
+                                </label>
+                                <div class="coupon-input-wrapper">
+                                    <input type="text" 
+                                           class="form-control coupon-input" 
+                                           id="couponCode" 
+                                           name="couponCode" 
+                                           placeholder="Enter coupon code (e.g., RAMADAN50)"
+                                           maxlength="20">
+                                    <button type="button" class="btn-apply-coupon" id="applyCouponBtn" onclick="applyCoupon()">
+                                        <i class="fas fa-check-circle me-1"></i>Apply
+                                    </button>
+                                </div>
+                                <div class="coupon-message" id="couponMessage"></div>
+                                <div class="coupon-hint">
+                                    <i class="fas fa-info-circle"></i>
+                                    First 50 customers: Use code <strong>RAMADAN50</strong> for 10% OFF!
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Privacy Consent (GDPR) -->
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" 
+                                       type="checkbox" 
+                                       id="privacyConsent" 
+                                       name="privacyConsent" 
+                                       required 
+                                       aria-required="true">
+                                <label class="form-check-label" for="privacyConsent">
+                                    I consent to my data being used only to ship this order. 
+                                    See <a href="privacy.html" target="_blank">Privacy Policy</a>
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <div class="invalid-feedback" id="privacyConsentError"></div>
+                            </div>
+                        </div>
+
+                        <!-- Security Notice -->
+                        <div class="alert alert-light">
+                            <i class="fas fa-shield-alt me-2"></i>
+                            Your data is secure and will only be used for order fulfillment.
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                            <button type="button" class="btn btn-cancel-hero" data-bs-dismiss="modal">
+                                <i class="fas fa-times me-2"></i>Cancel
+                            </button>
+                            <button type="submit" class="btn btn-submit-hero" id="submitBtn">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <span class="btn-text">Complete Order</span>
+                                <span class="spinner-border spinner-border-sm ms-2 d-none" role="status" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================================
+         CONFIRMATION MODAL
+         Requirement: Show order ID, summary, next steps
+         ======================================================================== -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-hero-theme">
+                <div class="modal-header modal-header-success">
+                    <div class="modal-title-wrapper">
+                        <div class="modal-icon success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h2 id="confirmationModalLabel" class="modal-title">Order Confirmed!</h2>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <p class="lead">Thank you for your order!</p>
+                        <p>Your Ramadan Journal will be shipped to your address.</p>
+                    </div>
+
+                    <div class="order-confirmation-details">
+                        <h3 class="h6">Order Details</h3>
+                        <dl class="row">
+                            <dt class="col-sm-4">Order ID:</dt>
+                            <dd class="col-sm-8"><code id="confirmOrderId"></code></dd>
+                            
+                            <dt class="col-sm-4">Email:</dt>
+                            <dd class="col-sm-8" id="confirmEmail"></dd>
+                            
+                            <dt class="col-sm-4">Product:</dt>
+                            <dd class="col-sm-8">Ramadan Journal v1</dd>
+                        </dl>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <h4 class="h6">What's Next?</h4>
+                        <ol class="mb-0">
+                            <li>You'll receive a confirmation email within 24 hours</li>
+                            <li>Payment instructions (COD or Bank Transfer) will be included</li>
+                            <li>Your journal will be shipped within 3-5 business days</li>
+                            <li>Track your delivery via email updates</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="modal-footer modal-footer-hero">
+                    <button type="button" class="btn btn-submit-hero" data-bs-dismiss="modal">
+                        <i class="fas fa-check me-2"></i>Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================================
+         FOOTER - Modern Hero Theme Design
+         ======================================================================== -->
+    <footer class="footer-hero-theme">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h4 class="brand-title">ARISE <span class="brand-arabic">بخمسة</span></h4>
+                        <p class="brand-tagline">Empowering Muslim women through faith-aligned resources</p>
+                    </div>
+
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h5>Quick Links</h5>
+                            <a href="#preview">Preview Journal</a>
+                            <a href="#" onclick="openOrderForm(); return false;">Order Now</a>
+                            <a href="../about.html">About Us</a>
+                        </div>
+
+                        <div class="footer-column">
+                            <h5>Contact</h5>
+                            <a href="mailto:jiyafatim@gmail.com"><i class="fas fa-envelope"></i> Email Us</a>
+                            <div class="pricing-info">
+                                <span>Pakistan: Rs. 2,300</span>
+                                <span>Global: £30</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-social">
+                        <h5>Follow Us</h5>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 ARISE. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="privacy.html">Privacy</a>
+                        <a href="terms.html">Terms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live region for screen reader announcements (accessibility) -->
+    <div id="liveRegion" aria-live="polite" aria-atomic="true" class="visually-hidden"></div>
+
+    <!-- ========================================================================
+         THANK YOU NOTIFICATION TOAST
+         Modern fading notification that appears after successful form submission
+         ======================================================================== -->
+    <div id="thankYouToast" class="thank-you-toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-content">
+            <div class="toast-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="toast-body">
+                <h4 class="toast-title">Thank You!</h4>
+                <p class="toast-message">Your order has been submitted successfully. We'll send confirmation to your email shortly.</p>
+            </div>
+            <button type="button" class="toast-close" aria-label="Close notification">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="toast-progress"></div>
+    </div>
+
+    <!-- ========================================================================
+         SCRIPTS
+         Load order: Bootstrap → jQuery → Custom modules → Main initialization
+         ======================================================================== -->
+    <!-- Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery (minimal usage, progressive enhancement) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- Custom Modules (IIFE pattern - no global pollution) -->
+    <script src="assets/js/pdf-preview.js"></script>
+    <script src="assets/js/form-handler.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Inline helpers for onclick attributes (minimal global scope pollution) -->
+    <script>
+        function scrollToPreview() {
+            document.getElementById('preview').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function openOrderForm() {
+            const modal = new bootstrap.Modal(document.getElementById('orderModal'));
+            modal.show();
+        }
+
+        // ========================================================================
+        // COUPON CODE FUNCTIONALITY
+        // ========================================================================
+        const COUPON_CONFIG = {
+            code: 'RAMADAN50',
+            discount: 0.10, // 10% discount
+            maxUses: 50,
+            currentUses: 0, // Track how many times used (in real app, this would be server-side)
+            basePrice: 2300
+        };
+
+        // Copy coupon code to clipboard
+        function copyCouponCode() {
+            const codeValue = document.getElementById('couponCodeDisplay').textContent;
+            navigator.clipboard.writeText(codeValue).then(() => {
+                const btn = event.currentTarget;
+                const originalIcon = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i>';
+                btn.style.background = 'rgba(16, 185, 129, 0.3)';
+                btn.style.color = '#10b981';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalIcon;
+                    btn.style.background = '';
+                    btn.style.color = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+
+        // Apply coupon code
+        function applyCoupon() {
+            const couponInput = document.getElementById('couponCode');
+            const couponMessage = document.getElementById('couponMessage');
+            const applyBtn = document.getElementById('applyCouponBtn');
+            const enteredCode = couponInput.value.trim().toUpperCase();
+
+            if (!enteredCode) {
+                showCouponMessage('Please enter a coupon code', 'error');
+                return;
+            }
+
+            applyBtn.disabled = true;
+            applyBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i>Applying...';
+
+            // Simulate API call delay
+            setTimeout(() => {
+                if (enteredCode === COUPON_CONFIG.code && COUPON_CONFIG.currentUses < COUPON_CONFIG.maxUses) {
+                    // Valid coupon
+                    const discount = COUPON_CONFIG.basePrice * COUPON_CONFIG.discount;
+                    const finalPrice = COUPON_CONFIG.basePrice - discount;
+
+                    // Update order summary
+                    document.getElementById('discountRow').style.display = 'flex';
+                    document.getElementById('discountCode').textContent = enteredCode;
+                    document.getElementById('discountAmount').textContent = `- Rs. ${Math.round(discount)}`;
+                    document.getElementById('totalPrice').textContent = `Rs. ${Math.round(finalPrice)}`;
+
+                    // Show success message
+                    showCouponMessage('<i class="fas fa-check-circle"></i> Coupon applied! You saved Rs. ' + Math.round(discount), 'success');
+
+                    // Disable input and change button
+                    couponInput.disabled = true;
+                    applyBtn.innerHTML = '<i class="fas fa-check-circle me-1"></i>Applied';
+                    applyBtn.style.background = '#10b981';
+                    applyBtn.style.color = 'white';
+
+                } else if (COUPON_CONFIG.currentUses >= COUPON_CONFIG.maxUses) {
+                    showCouponMessage('<i class="fas fa-exclamation-circle"></i> This coupon has reached its usage limit', 'error');
+                    applyBtn.disabled = false;
+                    applyBtn.innerHTML = '<i class="fas fa-check-circle me-1"></i>Apply';
+                } else {
+                    showCouponMessage('<i class="fas fa-times-circle"></i> Invalid coupon code', 'error');
+                    applyBtn.disabled = false;
+                    applyBtn.innerHTML = '<i class="fas fa-check-circle me-1"></i>Apply';
+                }
+            }, 800);
+        }
+
+        function showCouponMessage(message, type) {
+            const couponMessage = document.getElementById('couponMessage');
+            couponMessage.className = 'coupon-message ' + type;
+            couponMessage.innerHTML = message;
+        }
+
+        // Update spots remaining counter
+        function updateSpotsRemaining() {
+            const spotsRemaining = COUPON_CONFIG.maxUses - COUPON_CONFIG.currentUses;
+            const counterElement = document.getElementById('spotsRemaining');
+            if (counterElement) {
+                counterElement.textContent = spotsRemaining;
+            }
+        }
+
+        // ===== IMAGE GALLERY NAVIGATION =====
+        let currentPage = 1;
+        const totalPages = 5;
+
+        function selectPage(pageNum) {
+            if (pageNum < 1 || pageNum > totalPages) return;
+            
+            currentPage = pageNum;
+            
+            // Update main image
+            const mainImage = document.getElementById('mainImage');
+            if (mainImage) {
+                mainImage.style.opacity = '0';
+                setTimeout(() => {
+                    mainImage.src = `assets/img/${pageNum}.jpeg`;
+                    mainImage.style.opacity = '1';
+                }, 150);
+            }
+            
+            // Update page indicator
+            const pageIndicator = document.getElementById('currentPageNum');
+            if (pageIndicator) {
+                pageIndicator.textContent = pageNum;
+            }
+            
+            // Update thumbnail active state
+            const thumbnails = document.querySelectorAll('.thumbnail-item');
+            thumbnails.forEach((thumb, index) => {
+                if (index + 1 === pageNum) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                selectPage(currentPage + 1);
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                selectPage(currentPage - 1);
+            }
+        }
+
+        // Keyboard navigation for gallery
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                nextPage();
+            } else if (e.key === 'ArrowLeft') {
+                prevPage();
+            }
+        });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateSpotsRemaining();
+            selectPage(1); // Initialize gallery to first page
+        });
+    </script>
+</body>
+</html>

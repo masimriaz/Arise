@@ -55,6 +55,8 @@
 
 html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -62,6 +64,18 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+/* Touch-friendly mobile optimization */
+@media (max-width: 767px) {
+    html {
+        -webkit-tap-highlight-color: rgba(200, 169, 95, 0.2);
+        touch-action: manipulation;
+    }
+    
+    body {
+        -webkit-text-size-adjust: 100%;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2173,18 +2187,40 @@ a:focus {
         margin-top: 0.5rem;
     }
     
-    /* Price Grid */
+    /* Price Grid - Modern Card Design */
     .price-grid {
         flex-direction: column;
         gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .price-item {
+        padding: 1.25rem 1.5rem;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .price-item.price-highlight {
+        background: rgba(200, 169, 95, 0.15);
+        border-color: rgba(200, 169, 95, 0.3);
+        box-shadow: 0 6px 24px rgba(200, 169, 95, 0.2);
+    }
+    
+    .price-label {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .price-amount {
+        font-size: 1.75rem;
+        font-weight: 800;
     }
     
     .price-divider {
         display: none;
-    }
-    
-    .price-amount {
-        font-size: 1.5rem;
     }
     
     /* Preview Stats */
@@ -2261,31 +2297,96 @@ a:focus {
 }
 
 @media (max-width: 575px) {
-    /* Hero Section */
+    /* Hero Section - Modern Mobile Layout */
     .hero-section {
-        padding: 4rem 0 3rem;
+        padding: 2.5rem 0 2rem;
+        background-attachment: scroll;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        padding: 0 0.75rem;
+        order: 2;
+    }
+    
+    .hero-visual {
+        order: 1;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .journal-mockup {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    .journal-image {
+        border-radius: 16px;
+        box-shadow: 0 12px 40px rgba(10, 37, 64, 0.25);
     }
     
     .hero-title {
-        font-size: 1.75rem;
+        font-size: 1.85rem;
+        line-height: 1.15;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
     }
     
     .title-highlight {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        display: block;
+        margin-top: 0.25rem;
     }
     
     .hero-subtitle {
-        font-size: 0.95rem;
+        font-size: 0.98rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
     }
     
     .hero-ctas {
         flex-direction: column;
         width: 100%;
-        gap: 0.75rem;
+        gap: 0.85rem;
+        padding: 0 0.5rem;
     }
     
     .hero-ctas .btn {
         width: 100%;
+        padding: 1rem 1.5rem;
+        font-size: 1.05rem;
+        font-weight: 700;
+        border-radius: 14px;
+        box-shadow: 0 6px 20px rgba(10, 37, 64, 0.2);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .hero-ctas .btn:active {
+        transform: scale(0.98);
+    }
+    
+    .hero-ctas .btn-primary {
+        background: linear-gradient(135deg, #0a2540 0%, #1a4d6d 100%);
+        border: 2px solid #c8a95f;
+    }
+    
+    .hero-ctas .btn-secondary {
+        background: rgba(200, 169, 95, 0.1);
+        border: 2px solid #c8a95f;
+        color: #0a2540;
+        backdrop-filter: blur(10px);
+    }
+    
+    .counter-wrapper {
+        margin-top: 1.5rem;
+        padding: 0.85rem 1.25rem;
+        background: rgba(200, 169, 95, 0.1);
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
     }
     
     .price-display {
@@ -2297,174 +2398,361 @@ a:focus {
         display: none;
     }
     
-    /* Coupon Banner */
+    /* Coupon Banner - Modern Mobile Card */
     .coupon-banner-hero {
-        padding: 1rem;
+        padding: 1.25rem 1rem;
+        border-radius: 16px;
+        margin: 0 0.5rem 1.5rem;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 8px 32px rgba(10, 37, 64, 0.15),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
     
     .coupon-label {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.5px;
     }
     
     .coupon-code-display {
-        padding: 0.4rem 0.8rem;
+        padding: 0.65rem 1rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(200, 169, 95, 0.25);
     }
     
     .code-value {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+        font-weight: 700;
     }
     
     .btn-copy-code {
-        width: 32px;
-        height: 32px;
-        font-size: 0.8rem;
+        width: 38px;
+        height: 38px;
+        font-size: 0.85rem;
+        border-radius: 10px;
     }
     
     .coupon-benefit {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        font-weight: 600;
+    }
+    
+    .coupon-badge {
+        padding: 0.75rem 1rem;
+        border-radius: 12px;
     }
     
     .badge-number {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+        font-weight: 800;
     }
     
     .badge-text {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
     
     .badge-limited {
-        padding: 0.4rem 1rem;
-        font-size: 0.75rem;
+        padding: 0.5rem 1.25rem;
+        font-size: 0.8rem;
+        border-radius: 50px;
+        font-weight: 600;
     }
     
-    /* Preview Header */
+    /* Preview Header - Modern Layout */
     .preview-header {
-        padding: 2rem 0 1.5rem;
+        padding: 2.5rem 0 2rem;
+    }
+    
+    .preview-title-badge {
+        padding: 0.6rem 1.2rem;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+        display: inline-flex;
     }
     
     .preview-section-title {
-        font-size: 1.75rem;
+        font-size: 1.85rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        font-weight: 800;
     }
     
     .preview-section-subtitle {
-        font-size: 0.95rem;
+        font-size: 0.98rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
     }
     
     .preview-stats {
-        margin-top: 1.5rem;
+        margin-top: 1.75rem;
+        padding: 1.25rem;
+        border-radius: 16px;
+        backdrop-filter: blur(15px);
     }
     
-    /* Gallery */
+    .stat-item {
+        padding: 0.5rem;
+    }
+    
+    /* Gallery - Modern Card Layout */
     .image-gallery-viewer {
-        padding: 1rem 0.5rem;
+        padding: 1.5rem 0.75rem;
+        border-radius: 20px;
+        margin: 0 0.5rem;
+    }
+    
+    .main-image-container {
+        border-radius: 16px;
+        box-shadow: 0 12px 40px rgba(10, 37, 64, 0.2);
+    }
+    
+    #mainImage {
+        border-radius: 16px;
     }
     
     .gallery-nav-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 1rem;
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 16px rgba(10, 37, 64, 0.3);
     }
     
     .gallery-nav-btn.prev {
-        left: 5px;
+        left: 8px;
     }
     
     .gallery-nav-btn.next {
-        right: 5px;
+        right: 8px;
     }
     
     .thumbnail-gallery {
-        gap: 0.5rem;
+        gap: 0.65rem;
         overflow-x: auto;
         justify-content: flex-start;
-        padding: 1rem 0.5rem;
+        padding: 1.25rem 0.75rem;
         scrollbar-width: thin;
+        background: linear-gradient(135deg, #fafbfc 0%, #f8f9fa 100%);
+        border-radius: 16px;
+        margin: 0 0.5rem;
+        -webkit-overflow-scrolling: touch;
     }
     
     .thumbnail-item {
-        width: 90px;
+        width: 95px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .thumbnail-item.active {
+        box-shadow: 0 6px 20px rgba(200, 169, 95, 0.5);
     }
     
     .thumbnail-page-num {
-        padding: 3px 8px;
-        font-size: 0.7rem;
+        padding: 4px 10px;
+        font-size: 0.75rem;
+        border-radius: 8px;
+        font-weight: 700;
     }
     
     .page-indicator {
-        padding: 0.5rem 0.8rem;
-        font-size: 0.8rem;
-        bottom: 10px;
+        padding: 0.65rem 1.1rem;
+        font-size: 0.9rem;
+        bottom: 12px;
+        border-radius: 50px;
+        backdrop-filter: blur(15px);
+        font-weight: 700;
     }
     
     .image-caption {
-        font-size: 0.85rem;
-        margin-top: 1rem;
+        font-size: 0.88rem;
+        margin-top: 1.25rem;
+        padding: 0 0.5rem;
     }
     
-    /* Gallery CTA */
+    /* Gallery CTA - Modern Card */
     .gallery-cta-section {
-        padding: 2rem 1rem;
+        padding: 2.5rem 1.5rem;
+        margin: 0 0.5rem;
+        border-radius: 20px;
+        background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
+        box-shadow: 0 8px 32px rgba(10, 37, 64, 0.12);
+        border: 1px solid rgba(200, 169, 95, 0.2);
     }
     
     .gallery-cta-section h4 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+        font-weight: 700;
     }
     
     .gallery-cta-section p {
-        font-size: 0.95rem;
+        font-size: 0.98rem;
+        line-height: 1.6;
+        margin-bottom: 1.75rem;
     }
     
     .gallery-cta-section .btn-primary {
         width: 100%;
-        padding: 0.9rem 1.5rem;
-        font-size: 1rem;
+        padding: 1rem 2rem;
+        font-size: 1.05rem;
+        font-weight: 700;
+        border-radius: 14px;
+        box-shadow: 0 6px 24px rgba(10, 37, 64, 0.25);
+        transition: all 0.3s ease;
     }
     
-    /* Features */
+    .gallery-cta-section .btn-primary:active {
+        transform: scale(0.98);
+    }
+    
+    /* Features - Modern Cards */
     .features-section {
-        padding: 3rem 0;
+        padding: 3rem 0.5rem;
+    }
+    
+    .feature-card {
+        padding: 2rem 1.5rem;
+        border-radius: 20px;
+        margin-bottom: 1.25rem;
+        box-shadow: 0 8px 32px rgba(10, 37, 64, 0.15);
+        backdrop-filter: blur(10px);
     }
     
     .feature-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 1.2rem;
+        width: 55px;
+        height: 55px;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 6px 20px rgba(200, 169, 95, 0.3);
     }
     
     .feature-title {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+        font-weight: 700;
     }
     
     .feature-description {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
     
-    /* Modal Adjustments */
+    /* Modal - Modern Mobile Design */
     .modal-dialog {
-        margin: 0.5rem;
+        margin: 0.75rem;
+    }
+    
+    .modal-content {
+        border-radius: 20px;
+        overflow: hidden;
     }
     
     .modal-header-hero {
-        padding: 1.25rem;
+        padding: 1.5rem;
+        border-radius: 20px 20px 0 0;
     }
     
     .modal-title {
-        font-size: 1.3rem;
+        font-size: 1.35rem;
+        font-weight: 700;
     }
     
     .modal-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 1.2rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+        border-radius: 12px;
+    }
+    
+    .modal-body-hero {
+        padding: 1.5rem;
     }
     
     .order-summary-hero {
-        padding: 1rem;
+        padding: 1.25rem;
+        border-radius: 16px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .summary-header {
+        margin-bottom: 1rem;
+    }
+    
+    .product-item,
+    .discount-row,
+    .total-row {
+        padding: 0.75rem 0;
     }
     
     .product-price,
     .total-price {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
+        font-weight: 700;
+    }
+    
+    .form-control,
+    .form-select {
+        padding: 0.75rem 1rem;
+        border-radius: 12px;
+        font-size: 0.95rem;
+        border: 2px solid #e9ecef;
+        transition: all 0.3s ease;
+    }
+    
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #c8a95f;
+        box-shadow: 0 0 0 3px rgba(200, 169, 95, 0.1);
+    }
+    
+    .form-label {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #0a2540;
+    }
+    
+    .btn-submit-order {
+        width: 100%;
+        padding: 1.1rem;
+        font-size: 1.08rem;
+        border-radius: 14px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #0a2540 0%, #1a4d6d 100%);
+        border: 2px solid #c8a95f;
+        color: #c8a95f;
+        box-shadow: 0 8px 24px rgba(10, 37, 64, 0.3);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .btn-submit-order:active {
+        transform: scale(0.98);
+    }
+    
+    /* Smooth animations for mobile */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .feature-card,
+    .gallery-cta-section,
+    .image-gallery-viewer {
+        animation: fadeInUp 0.6s ease-out;
     }
 }
 

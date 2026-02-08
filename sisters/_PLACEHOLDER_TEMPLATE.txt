@@ -1,0 +1,22 @@
+SISTER PAGE PLACEHOLDER TEMPLATE
+=================================
+
+This template is used for all sister pages until content is finalized.
+
+[Name] - Sister's full name
+[Title & Role] - Professional title and role
+[Badge 1/2/3] - Hero section badges
+[Specialization 1-4] - Areas of expertise
+[Service 1-4] - Services offered
+[Credential 1-4] - Qualifications and credentials
+[Stat 1-3] - Quick statistics
+[Phone Number] - Contact phone
+[Email] - Contact email
+[Day Range/Day] - Availability schedule
+[Time] - Available hours
+[About content to be added] - Biography paragraph
+[Description] - Service/specialization description
+[Duration & Pricing] - Service details
+[#] - Numeric stat value
+
+All content is marked with [] brackets for easy identification.

@@ -312,11 +312,98 @@
     </section>
 
     <!-- ========================================================================
+         JOURNAL DOWNLOAD SECTION - Access Code Protected
+         ======================================================================== -->
+    <section id="journal-download" class="journal-download-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="download-card" id="downloadCard">
+                        <!-- Header -->
+                        <div class="download-header">
+                            <div class="download-icon-wrapper" id="downloadIcon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h2 class="download-title">Access Your Journal</h2>
+                            <p class="download-subtitle">Enter your unique access code to download the complete Ramadan Journal PDF</p>
+                        </div>
+
+                        <!-- Access Code Input -->
+                        <div class="access-code-form" id="accessCodeForm">
+                            <div class="code-input-group">
+                                <div class="input-icon">
+                                    <i class="fas fa-key"></i>
+                                </div>
+                                <input 
+                                    type="text" 
+                                    class="code-input" 
+                                    id="accessCodeInput" 
+                                    placeholder="Enter your access code (GUID format)"
+                                    maxlength="36"
+                                    autocomplete="off"
+                                    spellcheck="false">
+                                <button class="btn-verify-code" id="verifyBtn" onclick="verifyAccessCode()">
+                                    <i class="fas fa-check-circle me-2"></i>Verify
+                                </button>
+                            </div>
+                            <div class="code-message" id="codeMessage"></div>
+                            <div class="code-info">
+                                <i class="fas fa-info-circle me-2"></i>
+                                <span>Access code is provided after successful order confirmation</span>
+                            </div>
+                        </div>
+
+                        <!-- Download Section (Initially Hidden) -->
+                        <div class="download-unlocked-section" id="downloadUnlockedSection" style="display: none;">
+                            <div class="unlock-success-animation">
+                                <div class="success-checkmark">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h3>Access Granted!</h3>
+                                <p>Your journal is ready to download</p>
+                            </div>
+                            
+                            <div class="file-info-card">
+                                <div class="file-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div class="file-details">
+                                    <h4>Ramadan Journal 2026</h4>
+                                    <div class="file-meta">
+                                        <span><i class="fas fa-file-alt me-1"></i>70 Pages</span>
+                                        <span class="meta-divider">•</span>
+                                        <span><i class="fas fa-calendar me-1"></i>Version 1.0</span>
+                                        <span class="meta-divider">•</span>
+                                        <span><i class="fas fa-lock me-1"></i>PDF Format</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="assets/docs/Ramadan_Journal_v1.pdf" 
+                               class="btn-download-journal" 
+                               id="downloadBtn"
+                               download="Ramadan_Journal_2026_v1.pdf">
+                                <i class="fas fa-download me-2"></i>Download Journal PDF
+                                <span class="download-size">~8 MB</span>
+                            </a>
+
+                            <div class="download-footer-note">
+                                <i class="fas fa-shield-alt me-2"></i>
+                                <span>This file is for personal use only. Please respect copyright and do not redistribute.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
          ORDER FORM MODAL
          Requirement: Formspree integration, validation, accessibility
          Security: Honeypot (_gotcha), privacy consent, client validation
          ======================================================================== -->
-    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="true" data-bs-keyboard="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
             <div class="modal-content modal-hero-theme">
                 <div class="modal-header modal-header-hero">
@@ -332,37 +419,13 @@
                 <div class="modal-body modal-body-hero">
                     <!-- Order Summary -->
                     <div class="order-summary-hero mb-4">
-                        <div class="summary-header">
-                            <i class="fas fa-file-invoice"></i>
-                            <h3>Order Summary</h3>
-                        </div>
                         <div class="summary-content">
-                            <div class="product-item">
+                            <div class="product-item" style="justify-content: space-between; padding: 1rem; background: rgba(139, 92, 246, 0.1); border-radius: 8px; border-left: 4px solid #8b5cf6;">
                                 <div class="product-info">
                                     <i class="fas fa-book"></i>
-                                    <span>Ramadan Journal 2026 (Physical Copy)</span>
+                                    <span><strong>Ramadan Journal 2026</strong> - Physical Copy, Worldwide Shipping</span>
                                 </div>
-                                <span class="product-price" id="originalPrice">Rs. 2,300</span>
-                            </div>
-                            <div class="discount-row" id="discountRow" style="display: none;">
-                                <div class="discount-info">
-                                    <i class="fas fa-tag"></i>
-                                    <span>Discount (<span id="discountCode"></span>)</span>
-                                </div>
-                                <span class="discount-amount" id="discountAmount">- Rs. 0</span>
-                            </div>
-                            <div class="total-row">
-                                <div class="total-label">
-                                    <strong>Total Amount</strong>
-                                </div>
-                                <span class="total-price" id="totalPrice">Rs. 2,300</span>
-                            </div>
-                            <div class="payment-info">
-                                <i class="fas fa-info-circle"></i>
-                                <div>
-                                    <strong>Payment Options:</strong> Cash on Delivery (COD) or Bank Transfer<br>
-                                    <small>Payment instructions will be sent via email after order confirmation</small>
-                                </div>
+                                <span class="product-price" style="font-size: 1.25rem; font-weight: 700; color: #8b5cf6;">£30</span>
                             </div>
                         </div>
                     </div>
@@ -550,27 +613,18 @@
 
                         <!-- Coupon Code -->
                         <div class="mb-3">
-                            <div class="coupon-form-section">
-                                <label for="couponCode" class="form-label">
-                                    <i class="fas fa-tag me-2"></i>Coupon Code <span class="text-muted">(Optional)</span>
-                                </label>
-                                <div class="coupon-input-wrapper">
-                                    <input type="text" 
-                                           class="form-control coupon-input" 
-                                           id="couponCode" 
-                                           name="couponCode" 
-                                           placeholder="Enter coupon code (e.g., RAMADAN50)"
-                                           maxlength="20">
-                                    <button type="button" class="btn-apply-coupon" id="applyCouponBtn" onclick="applyCoupon()">
-                                        <i class="fas fa-check-circle me-1"></i>Apply
-                                    </button>
-                                </div>
-                                <div class="coupon-message" id="couponMessage"></div>
-                                <div class="coupon-hint">
-                                    <i class="fas fa-info-circle"></i>
-                                    First 50 customers: Use code <strong>RAMADAN50</strong> for 10% OFF!
-                                </div>
-                            </div>
+                            <label for="couponCode" class="form-label">
+                                <i class="fas fa-tag me-2"></i>Coupon Code <span class="text-muted">(Optional)</span>
+                            </label>
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="couponCode" 
+                                   name="couponCode" 
+                                   placeholder="Enter your coupon code if you have one"
+                                   maxlength="50">
+                            <small class="form-text text-muted">
+                                <i class="fas fa-info-circle"></i> If you have a promotional code, enter it here. It will be verified after submission.
+                            </small>
                         </div>
 
                         <!-- Privacy Consent (GDPR) -->
@@ -769,99 +823,114 @@
         }
 
         // ========================================================================
-        // COUPON CODE FUNCTIONALITY
+        // COUPON CODE - No client-side validation, submitted as-is
         // ========================================================================
-        const COUPON_CONFIG = {
-            code: 'RAMADAN50',
-            discount: 0.10, // 10% discount
-            maxUses: 50,
-            currentUses: 0, // Track how many times used (in real app, this would be server-side)
-            basePrice: 2300
-        };
+        // Coupon code is now submitted directly with the form without validation
+        // Server-side processing will handle coupon verification
 
-        // Copy coupon code to clipboard
-        function copyCouponCode() {
-            const codeValue = document.getElementById('couponCodeDisplay').textContent;
-            navigator.clipboard.writeText(codeValue).then(() => {
-                const btn = event.currentTarget;
-                const originalIcon = btn.innerHTML;
-                btn.innerHTML = '<i class="fas fa-check"></i>';
-                btn.style.background = 'rgba(16, 185, 129, 0.3)';
-                btn.style.color = '#10b981';
-                
-                setTimeout(() => {
-                    btn.innerHTML = originalIcon;
-                    btn.style.background = '';
-                    btn.style.color = '';
-                }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy:', err);
-            });
-        }
+        // ========================================================================
+        // JOURNAL DOWNLOAD - GUID ACCESS CODE VERIFICATION
+        // ========================================================================
+        // Valid access code (GUID format)
+        // Access Code: 7f3a9b2c-5d1e-4a8f-9c6d-2e7b4a1f8c3d
+        const VALID_ACCESS_CODE = '7f3a9b2c-5d1e-4a8f-9c6d-2e7b4a1f8c3d';
 
-        // Apply coupon code
-        function applyCoupon() {
-            const couponInput = document.getElementById('couponCode');
-            const couponMessage = document.getElementById('couponMessage');
-            const applyBtn = document.getElementById('applyCouponBtn');
-            const enteredCode = couponInput.value.trim().toUpperCase();
+        function verifyAccessCode() {
+            const input = document.getElementById('accessCodeInput');
+            const verifyBtn = document.getElementById('verifyBtn');
+            const messageDiv = document.getElementById('codeMessage');
+            const enteredCode = input.value.trim().toLowerCase();
 
-            if (!enteredCode) {
-                showCouponMessage('Please enter a coupon code', 'error');
-                return;
-            }
+            // Disable button during verification
+            verifyBtn.disabled = true;
+            verifyBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Verifying...';
 
-            applyBtn.disabled = true;
-            applyBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i>Applying...';
+            // Clear previous messages
+            messageDiv.className = 'code-message';
+            messageDiv.innerHTML = '';
 
-            // Simulate API call delay
+            // Simulate server verification delay
             setTimeout(() => {
-                if (enteredCode === COUPON_CONFIG.code && COUPON_CONFIG.currentUses < COUPON_CONFIG.maxUses) {
-                    // Valid coupon
-                    const discount = COUPON_CONFIG.basePrice * COUPON_CONFIG.discount;
-                    const finalPrice = COUPON_CONFIG.basePrice - discount;
-
-                    // Update order summary
-                    document.getElementById('discountRow').style.display = 'flex';
-                    document.getElementById('discountCode').textContent = enteredCode;
-                    document.getElementById('discountAmount').textContent = `- Rs. ${Math.round(discount)}`;
-                    document.getElementById('totalPrice').textContent = `Rs. ${Math.round(finalPrice)}`;
-
-                    // Show success message
-                    showCouponMessage('<i class="fas fa-check-circle"></i> Coupon applied! You saved Rs. ' + Math.round(discount), 'success');
-
-                    // Disable input and change button
-                    couponInput.disabled = true;
-                    applyBtn.innerHTML = '<i class="fas fa-check-circle me-1"></i>Applied';
-                    applyBtn.style.background = '#10b981';
-                    applyBtn.style.color = 'white';
-
-                } else if (COUPON_CONFIG.currentUses >= COUPON_CONFIG.maxUses) {
-                    showCouponMessage('<i class="fas fa-exclamation-circle"></i> This coupon has reached its usage limit', 'error');
-                    applyBtn.disabled = false;
-                    applyBtn.innerHTML = '<i class="fas fa-check-circle me-1"></i>Apply';
-                } else {
-                    showCouponMessage('<i class="fas fa-times-circle"></i> Invalid coupon code', 'error');
-                    applyBtn.disabled = false;
-                    applyBtn.innerHTML = '<i class="fas fa-check-circle me-1"></i>Apply';
+                if (!enteredCode) {
+                    showCodeMessage('Please enter an access code', 'error');
+                    verifyBtn.disabled = false;
+                    verifyBtn.innerHTML = '<i class="fas fa-check-circle me-2"></i>Verify';
+                    return;
                 }
-            }, 800);
+
+                // Validate GUID format
+                const guidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+                if (!guidRegex.test(enteredCode)) {
+                    showCodeMessage('<i class="fas fa-exclamation-triangle me-2"></i>Invalid code format. Please enter a valid GUID code.', 'error');
+                    verifyBtn.disabled = false;
+                    verifyBtn.innerHTML = '<i class="fas fa-check-circle me-2"></i>Verify';
+                    return;
+                }
+
+                // Verify against valid code
+                if (enteredCode === VALID_ACCESS_CODE) {
+                    // Success - unlock download
+                    showCodeMessage('<i class="fas fa-check-circle me-2"></i>Access code verified successfully!', 'success');
+                    
+                    // Animate unlock
+                    setTimeout(() => {
+                        unlockDownload();
+                    }, 800);
+                } else {
+                    showCodeMessage('<i class="fas fa-times-circle me-2"></i>Invalid access code. Please check your code and try again.', 'error');
+                    verifyBtn.disabled = false;
+                    verifyBtn.innerHTML = '<i class="fas fa-check-circle me-2"></i>Verify';
+                }
+            }, 1000);
         }
 
-        function showCouponMessage(message, type) {
-            const couponMessage = document.getElementById('couponMessage');
-            couponMessage.className = 'coupon-message ' + type;
-            couponMessage.innerHTML = message;
+        function showCodeMessage(message, type) {
+            const messageDiv = document.getElementById('codeMessage');
+            messageDiv.className = 'code-message ' + type;
+            messageDiv.innerHTML = message;
         }
 
-        // Update spots remaining counter
-        function updateSpotsRemaining() {
-            const spotsRemaining = COUPON_CONFIG.maxUses - COUPON_CONFIG.currentUses;
-            const counterElement = document.getElementById('spotsRemaining');
-            if (counterElement) {
-                counterElement.textContent = spotsRemaining;
+        function unlockDownload() {
+            const downloadCard = document.getElementById('downloadCard');
+            const downloadIcon = document.getElementById('downloadIcon');
+            const accessCodeForm = document.getElementById('accessCodeForm');
+            const downloadUnlockedSection = document.getElementById('downloadUnlockedSection');
+
+            // Add unlocked class to card
+            downloadCard.classList.add('unlocked');
+
+            // Change icon to unlocked
+            downloadIcon.classList.add('unlocked');
+            downloadIcon.innerHTML = '<i class="fas fa-unlock-alt"></i>';
+
+            // Hide access form and show download section
+            accessCodeForm.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+            accessCodeForm.style.opacity = '0';
+            accessCodeForm.style.transform = 'translateY(-20px)';
+
+            setTimeout(() => {
+                accessCodeForm.style.display = 'none';
+                downloadUnlockedSection.style.display = 'block';
+            }, 400);
+        }
+
+        // Allow Enter key to submit access code
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Access code input - Enter key support
+            const accessCodeInput = document.getElementById('accessCodeInput');
+            if (accessCodeInput) {
+                accessCodeInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        verifyAccessCode();
+                    }
+                });
             }
-        }
+
+            // Initialize gallery to first page
+            selectPage(1);
+        });
 
         // ===== IMAGE GALLERY NAVIGATION =====
         let currentPage = 1;
@@ -918,12 +987,6 @@
             } else if (e.key === 'ArrowLeft') {
                 prevPage();
             }
-        });
-
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            updateSpotsRemaining();
-            selectPage(1); // Initialize gallery to first page
         });
     </script>
 </body>

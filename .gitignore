@@ -1,2 +1,5 @@
 # Visual Studio
 .vs/
+
+# Ramadan Journal PDF assets (served from Google Drive instead)
+ramadan-journal/assets/docs/

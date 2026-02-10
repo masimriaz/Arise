@@ -652,21 +652,22 @@
 }
 
 .gallery-cta-section .btn-primary {
-    background: linear-gradient(135deg, #0a2540 0%, #1a4d6d 100%);
+    background: linear-gradient(135deg, #c8a95f 0%, #d4b875 100%);
     border: 2px solid #c8a95f;
-    color: #c8a95f;
+    color: #0a2540;
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
     font-weight: 700;
     border-radius: 50px;
     transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(200, 169, 95, 0.4);
 }
 
 .gallery-cta-section .btn-primary:hover {
-    background: #c8a95f;
+    background: linear-gradient(135deg, #d4b875 0%, #e0c690 100%);
     color: #0a2540;
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(200, 169, 95, 0.4);
+    box-shadow: 0 12px 35px rgba(200, 169, 95, 0.6);
 }
 
 /* Modern Controls Bar */
@@ -2365,7 +2366,7 @@
         font-size: 1.05rem;
         font-weight: 700;
         border-radius: 14px;
-        box-shadow: 0 6px 24px rgba(10, 37, 64, 0.25);
+        box-shadow: 0 6px 24px rgba(200, 169, 95, 0.4);
         transition: all 0.3s ease;
     }
     

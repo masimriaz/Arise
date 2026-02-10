@@ -73,11 +73,12 @@
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.95);
+    color: #ffffff;
     margin-bottom: 2.5rem;
     max-width: 600px;
     line-height: 1.7;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    font-weight: 400;
 }
 
 .hero-ecopy-note {
@@ -85,13 +86,15 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.92);
+    color: #ffffff;
     margin: -1rem 0 2rem;
-    padding: 0.6rem 1rem;
+    padding: 0.75rem 1.25rem;
     border-radius: 999px;
-    background: rgba(15, 118, 110, 0.25);
-    border: 1px solid rgba(200, 169, 95, 0.35);
+    background: rgba(200, 169, 95, 0.25);
+    border: 2px solid rgba(200, 169, 95, 0.6);
     max-width: fit-content;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
 }
 
 /* Pricing Grid */
@@ -114,20 +117,22 @@
 }
 
 .price-label {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    color: #0a2540;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+    text-shadow: none;
 }
 
 .price-amount {
     font-family: var(--font-heading);
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #ffffff;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #000000;
+    text-shadow: none;
+    letter-spacing: -0.5px;
 }
 
 .price-highlight {
@@ -172,6 +177,7 @@
     background: linear-gradient(135deg, #c8a95f 0%, #d4b875 100%);
     color: #0a2540;
     box-shadow: 0 8px 25px rgba(200, 169, 95, 0.4);
+    font-weight: 700;
 }
 
 .btn-primary:hover {
@@ -182,18 +188,20 @@
 }
 
 .btn-secondary {
-    background: transparent;
-    color: #ffffff;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.95);
+    color: #0a2540;
+    border: 2px solid #ffffff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    font-weight: 700;
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    border-color: #c8a95f;
+    background: #ffffff;
+    color: #0a2540;
+    border-color: #ffffff;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(200, 169, 95, 0.3);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5);
 }
 
 /* Counter */
@@ -1911,10 +1919,10 @@
     .price-item {
         padding: 1.25rem 1.5rem;
         border-radius: 16px;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
     
     .price-item.price-highlight {
@@ -2119,15 +2127,19 @@
     }
     
     .hero-ctas .btn-primary {
-        background: linear-gradient(135deg, #0a2540 0%, #1a4d6d 100%);
+        background: linear-gradient(135deg, #c8a95f 0%, #d4b875 100%);
         border: 2px solid #c8a95f;
+        color: #0a2540;
+        font-weight: 700;
+        box-shadow: 0 6px 20px rgba(200, 169, 95, 0.4);
     }
     
     .hero-ctas .btn-secondary {
-        background: rgba(200, 169, 95, 0.1);
-        border: 2px solid #c8a95f;
+        background: rgba(255, 255, 255, 0.95);
+        border: 2px solid #ffffff;
         color: #0a2540;
         backdrop-filter: blur(10px);
+        font-weight: 700;
     }
     
     .counter-wrapper {

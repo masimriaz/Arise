@@ -1,10 +1,87 @@
 /* ============================================================================
-   RAMADAN JOURNAL LANDING PAGE - CUSTOM CSS
-   Brand: ARISE - Ramadan Journal 2026
-   Design: Accessible, conversion-focused, modern premium aesthetic
-   Colors: Emerald/Teal (#0f766e), Warm Gold (#D4AF37), Off-White (#f8f9fa)
-   Typography: Poppins (headings), Inter (body)
-   ============================================================================ */
+    RAMADAN JOURNAL LANDING PAGE - CUSTOM CSS
+    Brand: ARISE - Ramadan Journal 2026
+    Design: Accessible, conversion-focused, modern premium aesthetic
+    ============================================================================ */
+/* ========================================================================
+   JOURNAL DOWNLOAD SECTION - Access Code Protected
+   Modern glass morphism design with lock/unlock animations
+   ======================================================================== */
+.download-section-header.preview-header {
+    padding: 4rem 0 6rem;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.download-section-header .preview-title-badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.download-section-header .preview-section-subtitle {
+    max-width: 650px;
+}
+
+.download-section-body {
+    margin-top: -120px;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 4rem;
+}
+
+.download-meta-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.download-meta-item {
+    text-align: left;
+}
+
+.meta-label {
+    display: block;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.3rem;
+}
+
+.meta-value {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+@media (max-width: 991px) {
+    .download-section-body {
+        margin-top: -60px;
+    }
+    .download-meta-panel {
+        margin-top: 2rem;
+    }
+    .download-meta-item {
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .download-meta-panel {
+        text-align: right;
+    }
+    .download-meta-panel .download-meta-item {
+        text-align: right;
+    }
+}
 
 /* ========================================================================
    CSS CUSTOM PROPERTIES (Design Tokens)

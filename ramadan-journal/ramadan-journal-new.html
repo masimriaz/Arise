@@ -320,82 +320,115 @@
          JOURNAL DOWNLOAD SECTION - Access Code Protected
          ======================================================================== -->
     <section id="journal-download" class="journal-download-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="download-card" id="downloadCard">
-                        <!-- Header -->
-                        <div class="download-header">
-                            <div class="download-icon-wrapper" id="downloadIcon">
-                                <i class="fas fa-lock"></i>
-                            </div>
-                            <h2 class="download-title">Access Your Journal</h2>
-                            <p class="download-subtitle">Enter your unique access code to download the complete Ramadan Journal PDF</p>
+        <div class="preview-header download-section-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="preview-title-badge">
+                            <i class="fas fa-lock"></i>
+                            <span>Secure Access</span>
                         </div>
-
-                        <!-- Access Code Input -->
-                        <div class="access-code-form" id="accessCodeForm">
-                            <div class="code-input-group">
-                                <div class="input-icon">
-                                    <i class="fas fa-key"></i>
-                                </div>
-                                <input 
-                                    type="text" 
-                                    class="code-input" 
-                                    id="accessCodeInput" 
-                                    placeholder="Enter your access code (GUID format)"
-                                    maxlength="36"
-                                    autocomplete="off"
-                                    spellcheck="false">
-                                <button class="btn-verify-code" id="verifyBtn" onclick="verifyAccessCode()">
-                                    <i class="fas fa-check-circle me-2"></i>Verify
-                                </button>
+                        <h2 class="preview-section-title">Access Your Journal</h2>
+                        <p class="preview-section-subtitle">Enter your verified access code to unlock the complete Ramadan Journal experience for on-demand reading and reflection.</p>
+                    </div>
+                    <div class="col-lg-5 text-lg-end">
+                        <div class="download-meta-panel">
+                            <div class="download-meta-item">
+                                <span class="meta-label">Format</span>
+                                <span class="meta-value">PDF • 70 Guided Pages</span>
                             </div>
-                            <div class="code-message" id="codeMessage"></div>
-                            <div class="code-info">
-                                <i class="fas fa-info-circle me-2"></i>
-                                <span>Access code is provided after successful order confirmation</span>
+                            <div class="download-meta-item">
+                                <span class="meta-label">File Size</span>
+                                <span class="meta-value">~10 MB</span>
+                            </div>
+                            <div class="download-meta-item">
+                                <span class="meta-label">Delivery</span>
+                                <span class="meta-value">Instant e-copy post verification</span>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                        <!-- Download Section (Initially Hidden) -->
-                        <div class="download-unlocked-section" id="downloadUnlockedSection" style="display: none;">
-                            <div class="unlock-success-animation">
-                                <div class="success-checkmark">
-                                    <i class="fas fa-check-circle"></i>
+        <div class="download-section-body">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="download-card" id="downloadCard">
+                            <!-- Header -->
+                            <div class="download-header">
+                                <div class="download-icon-wrapper" id="downloadIcon">
+                                    <i class="fas fa-lock"></i>
                                 </div>
-                                <h3>Access Granted!</h3>
-                                <p>Your journal is ready to download</p>
+                                <h2 class="download-title">Verify Your Access Code</h2>
+                                <p class="download-subtitle">Enter your unique access code to download the complete Ramadan Journal PDF</p>
                             </div>
-                            
-                            <div class="file-info-card">
-                                <div class="file-icon">
-                                    <i class="fas fa-file-pdf"></i>
+
+                            <!-- Access Code Input -->
+                            <div class="access-code-form" id="accessCodeForm">
+                                <div class="code-input-group">
+                                    <div class="input-icon">
+                                        <i class="fas fa-key"></i>
+                                    </div>
+                                    <input 
+                                        type="text" 
+                                        class="code-input" 
+                                        id="accessCodeInput" 
+                                        placeholder="Enter your access code (GUID format)"
+                                        maxlength="36"
+                                        autocomplete="off"
+                                        spellcheck="false">
+                                    <button class="btn-verify-code" id="verifyBtn" onclick="verifyAccessCode()">
+                                        <i class="fas fa-check-circle me-2"></i>Verify
+                                    </button>
                                 </div>
-                                <div class="file-details">
-                                    <h4>Ramadan Journal 2026</h4>
-                                    <div class="file-meta">
-                                        <span><i class="fas fa-file-alt me-1"></i>70 Pages</span>
-                                        <span class="meta-divider">•</span>
-                                        <span><i class="fas fa-calendar me-1"></i>Version 1.0</span>
-                                        <span class="meta-divider">•</span>
-                                        <span><i class="fas fa-lock me-1"></i>PDF Format</span>
+                                <div class="code-message" id="codeMessage"></div>
+                                <div class="code-info">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    <span>Access code is provided after successful order confirmation</span>
+                                </div>
+                            </div>
+
+                            <!-- Download Section (Initially Hidden) -->
+                            <div class="download-unlocked-section" id="downloadUnlockedSection" style="display: none;">
+                                <div class="unlock-success-animation">
+                                    <div class="success-checkmark">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <h3>Access Granted!</h3>
+                                    <p>Your journal is ready to download</p>
+                                </div>
+                                
+                                <div class="file-info-card">
+                                    <div class="file-icon">
+                                        <i class="fas fa-file-pdf"></i>
+                                    </div>
+                                    <div class="file-details">
+                                        <h4>Ramadan Journal 2026</h4>
+                                        <div class="file-meta">
+                                            <span><i class="fas fa-file-alt me-1"></i>70 Pages</span>
+                                            <span class="meta-divider">•</span>
+                                            <span><i class="fas fa-calendar me-1"></i>Version 1.0</span>
+                                            <span class="meta-divider">•</span>
+                                            <span><i class="fas fa-lock me-1"></i>PDF Format</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                                     <a href="https://drive.google.com/uc?export=download&id=1ektywB5Sla0-qeJQFsyNtO_hnDcybBUT" 
-                               class="btn-download-journal" 
-                               id="downloadBtn"
-                               download="Ramadan_Journal_2026_v1.pdf"
-                               target="_blank">
-                                <i class="fas fa-download me-2"></i>Download Journal PDF
-                                <span class="download-size">~8 MB</span>
-                            </a>
+                                <a href="https://drive.google.com/uc?export=download&id=1ektywB5Sla0-qeJQFsyNtO_hnDcybBUT" 
+                                   class="btn-download-journal" 
+                                   id="downloadBtn"
+                                   download="Ramadan_Journal_2026_v1.pdf"
+                                   target="_blank">
+                                    <i class="fas fa-download me-2"></i>Download Journal PDF
+                                    <span class="download-size">~10 MB</span>
+                                </a>
 
-                            <div class="download-footer-note">
-                                <i class="fas fa-shield-alt me-2"></i>
-                                <span>This file is for personal use only. Please respect copyright and do not redistribute.</span>
+                                <div class="download-footer-note">
+                                    <i class="fas fa-shield-alt me-2"></i>
+                                    <span>This file is for personal use only. Please respect copyright and do not redistribute.</span>
+                                </div>
                             </div>
                         </div>
                     </div>

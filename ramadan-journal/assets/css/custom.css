@@ -1,459 +1,63 @@
 /* ============================================================================
-    RAMADAN JOURNAL LANDING PAGE - CUSTOM CSS
-    Brand: ARISE - Ramadan Journal 2026
-    Design: Accessible, conversion-focused, modern premium aesthetic
-    ============================================================================ */
-/* ========================================================================
-   JOURNAL DOWNLOAD SECTION - Access Code Protected
-   Modern glass morphism design with lock/unlock animations
-   ======================================================================== */
-.download-section-header.preview-header {
-    padding: 4rem 0 6rem;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-}
-
-.download-section-header .preview-title-badge {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.25);
-}
-
-.download-section-header .preview-section-subtitle {
-    max-width: 650px;
-}
-
-.download-section-body {
-    margin-top: -120px;
-    position: relative;
-    z-index: 2;
-    padding-bottom: 4rem;
-}
-
-.download-meta-panel {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 24px;
-    padding: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-.download-meta-item {
-    text-align: left;
-}
-
-.meta-label {
-    display: block;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 0.3rem;
-}
-
-.meta-value {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #ffffff;
-}
-
-@media (max-width: 991px) {
-    .download-section-body {
-        margin-top: -60px;
-    }
-    .download-meta-panel {
-        margin-top: 2rem;
-    }
-    .download-meta-item {
-        text-align: center;
-    }
-}
-
-@media (min-width: 992px) {
-    .download-meta-panel {
-        text-align: right;
-    }
-    .download-meta-panel .download-meta-item {
-        text-align: right;
-    }
-}
-
-/* ========================================================================
-   CSS CUSTOM PROPERTIES (Design Tokens)
-   Easy updates for theming and maintenance
-   ======================================================================== */
-:root {
-    /* Brand Colors */
-    --brand-emerald: #0f766e;
-    --brand-emerald-light: #14b8a6;
-    --brand-emerald-dark: #0d5a54;
-    --brand-gold: #D4AF37;
-    --brand-gold-light: #e8c868;
-    --brand-gold-dark: #b8941f;
-    
-    /* Neutral Palette */
-    --bg-white: #ffffff;
-    --bg-off-white: #f8f9fa;
-    --bg-light: #f1f5f9;
-    --text-dark: #1e293b;
-    --text-gray: #64748b;
-    --text-light: #94a3b8;
-    
-    /* Typography */
-    --font-heading: 'Poppins', sans-serif;
-    --font-body: 'Inter', sans-serif;
-    
-    /* Spacing */
-    --section-padding: 5rem;
-    --card-padding: 2rem;
-    
-    /* Shadows */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
-    --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.2);
-    
-    /* Transitions */
-    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-fast: all 0.15s ease;
-}
-
-/* ========================================================================
-   GLOBAL RESETS & BASE STYLES
-   ======================================================================== */
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-    font-family: var(--font-body);
-    color: var(--text-dark);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* Touch-friendly mobile optimization */
-@media (max-width: 767px) {
-    html {
-        -webkit-tap-highlight-color: rgba(200, 169, 95, 0.2);
-        touch-action: manipulation;
-    }
-    
-    body {
-        -webkit-text-size-adjust: 100%;
-    }
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-a {
-    text-decoration: none;
-    transition: var(--transition-fast);
-}
-
-/* Accessibility: Skip to content */
-.skip-to-content {
-    position: absolute;
-    left: -9999px;
-    z-index: 999;
-    padding: 1rem;
-    background: var(--brand-emerald);
-    color: white;
-}
-
-.skip-to-content:focus {
-    left: 0;
-    top: 0;
-}
-
-/* Focus styles for accessibility */
-*:focus {
-    outline: 3px solid var(--brand-gold);
-    outline-offset: 2px;
-}
-
-button:focus,
-a:focus {
-    outline: 3px solid var(--brand-gold);
-    outline-offset: 2px;
-}
-
-/* ========================================================================
-   NAVIGATION - Using parent site styles
-   ======================================================================== */
-
-/* ========================================================================
-   HERO SECTION
-   Modern Ramadan-themed hero with Islamic pattern background
-   ======================================================================== */
-.hero-section-journal {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(135deg, #0a2540 0%, #1a4d6d 50%, #2d5f7a 100%);
-    position: relative;
-    padding: 8rem 0 4rem;
     overflow: hidden;
+    letter-spacing: 0.3px;
 }
 
-/* Islamic Pattern Background */
-.hero-section-journal::after {
+.btn-download-journal::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(200, 169, 95, 0.03) 35px, rgba(200, 169, 95, 0.03) 70px),
-        repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(200, 169, 95, 0.03) 35px, rgba(200, 169, 95, 0.03) 70px);
-    opacity: 0.6;
-    z-index: 0;
-    pointer-events: none;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transition: left 0.5s ease;
 }
 
-/* Decorative Islamic Stars */
-.hero-section-journal::before {
-    content: '☪ ✦ ✧ ☪ ✦ ✧';
-    position: absolute;
-    top: 10%;
-    right: 5%;
-    font-size: 3rem;
-    color: rgba(200, 169, 95, 0.15);
-    letter-spacing: 2rem;
-    z-index: 0;
-    pointer-events: none;
-    animation: twinkle 4s ease-in-out infinite;
+.btn-download-journal:hover::before {
+    left: 100%;
 }
 
-@keyframes twinkle {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.6; }
+.btn-download-journal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 45px rgba(200, 169, 95, 0.45);
+    color: #0a2540;
+    text-decoration: none;
 }
 
-.hero-banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.08;
-    z-index: 0;
-    pointer-events: none;
-    mix-blend-mode: overlay;
+.btn-download-journal:active {
+    transform: translateY(-1px);
 }
 
-.hero-section-journal .container {
-    position: relative;
-    z-index: 2;
+.download-size {
+    margin-left: auto;
+    padding: 0.4rem 0.85rem;
+    background: rgba(10, 37, 64, 0.08);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(10, 37, 64, 0.15);
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-/* Limited Offer Badge */
-.badge-limited {
-    display: inline-flex;
+.download-footer-note {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #c8a95f;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: rgba(10, 37, 64, 0.9);
+    font-weight: 600;
+    display: flex;
     align-items: center;
     gap: 0.5rem;
-    background: linear-gradient(135deg, #c8a95f 0%, #d4b875 100%);
-    color: #0a2540;
-    padding: 0.6rem 1.8rem;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 8px 25px rgba(200, 169, 95, 0.4);
-    animation: pulse 2s infinite;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
+.download-footer-note i {
+    color: #facc15;
+    font-size: 1.1rem;
 }
-
-/* Coupon Banner */
-.coupon-banner {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    background: linear-gradient(135deg, rgba(200, 169, 95, 0.2) 0%, rgba(212, 184, 117, 0.15) 100%);
-    border: 2px solid rgba(200, 169, 95, 0.5);
-    border-radius: 16px;
-    padding: 1.25rem 1.5rem;
-    margin-bottom: 1.75rem;
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 25px rgba(200, 169, 95, 0.3);
-    animation: couponGlow 3s ease-in-out infinite;
-}
-
-@keyframes couponGlow {
-    0%, 100% {
-        box-shadow: 0 8px 25px rgba(200, 169, 95, 0.3);
-    }
-    50% {
-        box-shadow: 0 8px 35px rgba(200, 169, 95, 0.5);
-    }
-}
-
-.coupon-banner::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    animation: couponShine 3s infinite;
-}
-
-@keyframes couponShine {
-    0% {
-        transform: translateX(-100%) translateY(-100%) rotate(45deg);
-    }
-    100% {
-        transform: translateX(100%) translateY(100%) rotate(45deg);
-    }
-}
-
-.coupon-icon {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #c8a95f 0%, #d4b875 100%);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    box-shadow: 0 4px 15px rgba(200, 169, 95, 0.4);
-}
-
-.coupon-icon i {
-    font-size: 1.5rem;
-    color: #0a2540;
-}
-
-.coupon-content {
-    flex: 1;
-    position: relative;
-    z-index: 1;
-}
-
-.coupon-title {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #c8a95f;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-}
-
-.coupon-code-display {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.4rem;
-}
-
-.code-label {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 600;
-}
-
-.code-value {
-    font-family: 'Courier New', monospace;
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: #ffffff;
-    background: rgba(10, 37, 64, 0.4);
-    padding: 0.4rem 1rem;
-    border-radius: 8px;
-    letter-spacing: 2px;
-    border: 1px dashed rgba(200, 169, 95, 0.6);
-}
-
-.btn-copy-code {
-    background: rgba(200, 169, 95, 0.2);
-    border: 1px solid rgba(200, 169, 95, 0.4);
-    color: #c8a95f;
-    padding: 0.4rem 0.75rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-}
-
-.btn-copy-code:hover {
-    background: rgba(200, 169, 95, 0.3);
-    transform: scale(1.1);
-}
-
-.coupon-benefit {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.85);
-    font-weight: 600;
-}
-
-.coupon-badge {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 0.75rem 1rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    min-width: 70px;
-}
-
-.badge-number {
-    font-size: 2rem;
-    font-weight: 900;
-    color: #c8a95f;
-    line-height: 1;
-}
-
-.badge-text {
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.9);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-}
-
-/* Hero Title */
-.hero-title {
-    font-size: clamp(2.8rem, 5vw, 4.5rem);
-    font-weight: 900;
-    color: #ffffff;
     margin-bottom: 1rem;
     line-height: 1.1;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -3409,7 +3013,7 @@ a:focus {
    ======================================================================== */
 .journal-download-section {
     padding: 6rem 0;
-    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    background: linear-gradient(135deg, #0a2540 0%, #102f52 50%, #1e3d66 100%);
     position: relative;
     overflow: hidden;
 }
@@ -3417,30 +3021,29 @@ a:focus {
 .journal-download-section::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-    opacity: 0.3;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.12), transparent 45%),
+        radial-gradient(circle at 80% 0%, rgba(200, 169, 95, 0.2), transparent 50%),
+        radial-gradient(circle at 60% 80%, rgba(139, 92, 246, 0.15), transparent 55%);
+    opacity: 0.9;
 }
 
 .download-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(28px);
     border-radius: 24px;
     padding: 3rem;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 25px 70px rgba(10, 37, 64, 0.35);
     position: relative;
     z-index: 1;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(200, 169, 95, 0.25);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .download-card.unlocked {
-    background: rgba(255, 255, 255, 0.98);
-    border: 2px solid rgba(16, 185, 129, 0.4);
-    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.25);
+    border: 2px solid rgba(200, 169, 95, 0.6);
+    box-shadow: 0 30px 80px rgba(200, 169, 95, 0.25);
 }
 
 /* Download Header */
@@ -3453,12 +3056,12 @@ a:focus {
     width: 100px;
     height: 100px;
     margin: 0 auto 1.5rem;
-    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    background: linear-gradient(135deg, #c8a95f 0%, #f6d683 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 40px rgba(15, 118, 110, 0.3);
+    box-shadow: 0 15px 45px rgba(200, 169, 95, 0.4);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
 }
@@ -3468,7 +3071,7 @@ a:focus {
     position: absolute;
     inset: -3px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    background: linear-gradient(135deg, #c8a95f, #f6d683);
     opacity: 0;
     transition: opacity 0.5s ease;
     animation: pulse-ring 2s infinite;
@@ -3490,8 +3093,8 @@ a:focus {
 }
 
 .download-icon-wrapper.unlocked {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.4);
+    background: linear-gradient(135deg, #fde047 0%, #f59e0b 100%);
+    box-shadow: 0 20px 50px rgba(245, 158, 11, 0.35);
     animation: unlock-bounce 0.6s ease;
 }
 
@@ -3567,7 +3170,7 @@ a:focus {
     left: 1.25rem;
     top: 50%;
     transform: translateY(-50%);
-    color: #0f766e;
+    color: #c8a95f;
     font-size: 1.1rem;
     z-index: 2;
     pointer-events: none;
@@ -3587,8 +3190,8 @@ a:focus {
 
 .code-input:focus {
     outline: none;
-    border-color: #14b8a6;
-    box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.1);
+    border-color: #c8a95f;
+    box-shadow: 0 0 0 4px rgba(200, 169, 95, 0.2);
 }
 
 .code-input::placeholder {
@@ -3599,8 +3202,8 @@ a:focus {
 
 .btn-verify-code {
     padding: 1.2rem 2rem;
-    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
-    color: white;
+    background: linear-gradient(135deg, #c8a95f 0%, #d4b875 100%);
+    color: #0a2540;
     border: none;
     border-radius: 12px;
     font-weight: 600;
@@ -3608,13 +3211,13 @@ a:focus {
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
-    box-shadow: 0 4px 15px rgba(15, 118, 110, 0.3);
+    box-shadow: 0 4px 18px rgba(200, 169, 95, 0.35);
 }
 
 .btn-verify-code:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(15, 118, 110, 0.4);
-    background: linear-gradient(135deg, #0d5a54 0%, #0f766e 100%);
+    box-shadow: 0 8px 25px rgba(200, 169, 95, 0.4);
+    background: linear-gradient(135deg, #d4b875 0%, #e0c690 100%);
 }
 
 .btn-verify-code:active {
@@ -3655,9 +3258,9 @@ a:focus {
 }
 
 .code-message.success {
-    background: rgba(16, 185, 129, 0.1);
-    border: 1px solid rgba(16, 185, 129, 0.3);
-    color: #059669;
+    background: rgba(200, 169, 95, 0.15);
+    border: 1px solid rgba(200, 169, 95, 0.35);
+    color: #8a6b1f;
     display: block;
 }
 
@@ -3668,9 +3271,9 @@ a:focus {
     color: var(--text-gray);
     font-size: 0.9rem;
     padding: 1rem;
-    background: rgba(15, 118, 110, 0.05);
+    background: rgba(10, 37, 64, 0.04);
     border-radius: 10px;
-    border: 1px dashed rgba(15, 118, 110, 0.2);
+    border: 1px dashed rgba(200, 169, 95, 0.35);
 }
 
 /* Download Unlocked Section */
@@ -3698,12 +3301,12 @@ a:focus {
     width: 80px;
     height: 80px;
     margin: 0 auto 1.5rem;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(135deg, #c8a95f 0%, #facc15 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 12px 45px rgba(200, 169, 95, 0.45);
     animation: successPop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -3730,7 +3333,7 @@ a:focus {
     font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 700;
-    color: #047857;
+    color: #0a2540;
     margin-bottom: 0.5rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -3748,11 +3351,11 @@ a:focus {
     align-items: center;
     gap: 1.5rem;
     padding: 1.75rem;
-    background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 16px;
-    border: 2px solid #14b8a6;
+    border: 2px solid rgba(200, 169, 95, 0.3);
     margin-bottom: 2rem;
-    box-shadow: 0 4px 15px rgba(15, 118, 110, 0.1);
+    box-shadow: 0 8px 25px rgba(10, 37, 64, 0.08);
 }
 
 .file-icon {
@@ -3791,7 +3394,7 @@ a:focus {
 }
 
 .file-meta i {
-    color: #0f766e;
+    color: #c8a95f;
 }
 
 .meta-divider {
@@ -3807,8 +3410,8 @@ a:focus {
     gap: 0.75rem;
     width: 100%;
     padding: 1.6rem 2rem;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    color: white;
+    background: linear-gradient(135deg, #c8a95f 0%, #d4b875 100%);
+    color: #0a2540;
     border: none;
     border-radius: 14px;
     font-size: 1.2rem;
@@ -3816,7 +3419,7 @@ a:focus {
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.35);
+    box-shadow: 0 12px 35px rgba(200, 169, 95, 0.4);
     position: relative;
     overflow: hidden;
     letter-spacing: 0.3px;
@@ -3829,7 +3432,7 @@ a:focus {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
     transition: left 0.5s ease;
 }
 
@@ -3839,8 +3442,8 @@ a:focus {
 
 .btn-download-journal:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
-    color: white;
+    box-shadow: 0 18px 45px rgba(200, 169, 95, 0.45);
+    color: #0a2540;
     text-decoration: none;
 }
 
@@ -3861,20 +3464,20 @@ a:focus {
 .download-footer-note {
     margin-top: 1.5rem;
     padding: 1.25rem;
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-    border-left: 4px solid #f59e0b;
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #c8a95f;
     border-radius: 10px;
     font-size: 0.95rem;
-    color: #78350f;
+    color: rgba(10, 37, 64, 0.9);
     font-weight: 600;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .download-footer-note i {
-    color: #f59e0b;
+    color: #facc15;
     font-size: 1.1rem;
 }
 
